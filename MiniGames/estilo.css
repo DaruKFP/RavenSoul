@@ -134,6 +134,33 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	opacity: 0.2;
 	z-index: 3;
 }
+
+#cubierta{
+	z-index: 4;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: grey;
+	display: none;
+	opacity: 0.5;
+}
+
+#log{
+	z-index: 5;
+    border: 3px solid slategrey;
+    position: absolute;
+    background-color: aquamarine;
+    padding-left:30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    display: none;
+    top: 40%;
+    left: 35%;
+}
+
 /*
 #presentacion ul{
 height: 320px;
@@ -374,12 +401,12 @@ left: 25%;
 }
 #login{
     margin: 8% 0% 0% 0%;
-	width:10px;
-	height:17px;
+	width:100px;
+	height:65px;
 	display:block;
-        position:absolute;
-	right:100px;
-	top:27px;
+    position:absolute;
+	right:15px;
+	top:70px;
 }
 #menu li a:hover #icono5{
 	

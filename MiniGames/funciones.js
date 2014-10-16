@@ -27,3 +27,27 @@ function ent1(){
 	var im = document.getElementById("minicajas1");
 
 }
+
+function abrir(){
+	var cub = document.getElementById("cubierta");
+	var lg = document.getElementById("log");
+	cub.style.display = "block";
+	lg.style.display = "block";
+}
+
+function cerrar(){
+	var cub = document.getElementById("cubierta");
+	var men = document.getElementById("log");
+	cub.style.display = "none";
+    men.style.display= "none";
+}
+
+function iniF(){
+	var usuario = document.getElementById("nUsuario");
+	var cub = document.getElementById("cubierta");
+	var men = document.getElementById("log");
+	cub.style.display = "none";
+    men.style.display= "none";
+    var log = document.getElementById("login");
+    log.innerHTML = usuario.value;;
+}

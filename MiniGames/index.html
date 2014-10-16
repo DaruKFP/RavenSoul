@@ -74,9 +74,9 @@
                     
             
             <section id="login">
-                <article><ul> <li><img src="imagenes/png/oso.gif" width="50" height="70" alt="Img 03" ></li> </ul></article>
-                        
-                    </section>
+                <button style="width: 100%" onclick="abrir()">Inicio sesion</button>
+                <a href="nuevo.html"><button style="width: 100%">Usuario nuevo</button></a>
+            </section>
             
             <footer id="terminos">
                 
@@ -84,7 +84,15 @@
                
             </footer>
             
-            
+             <div id="cubierta"></div>
+             <div id="log">
+                <p>
+                    Nombre de usuario:<input id="nUsuario" type="text"><br/>
+                    Contraseña: <input id="contra" type="password">
+                </p>
+                <button type="button" onclick="iniF()">Iniciar</button>
+                <button type="button" onclick="cerrar()">Cancelar</button>
+            </div>
             </div> 
     </body>
 </html>
