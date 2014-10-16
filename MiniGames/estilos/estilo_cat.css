@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/10/2014, 09:39:12 PM
+    Author     : Jesus
+*/
+
+#t{
+    width: 98%;
+    height: 1400px;
+    //border: 2px solid black;
+    padding: 1%;
+}
+#tsup{
+    //border: 2px solid blue;
+    width: 98%;
+    height: 3%;
+}
+#th{
+    width: 60%;
+    //border: 2px solid green;
+    height: 100%;
+    float:left;
+}
+#bus{
+    width: 20%;
+    //border: 2px solid salmon;
+    height: 100%;
+    float: left;
+}
+#cat{
+    width: 19%;
+    //border: 2px solid gold;
+    height: 100%;
+    float : left;
+    
+}
+#nuevos{
+    margin-top: 1%;
+    //border: 2px solid black;
+    width: 99%;
+    height: 15%;
+    padding: .5%;
+}
+article{
+    width: 19%;
+    //border: 2px solid indianred;
+    height: 45%;
+    float:left;
+}
+
+#jmmo{
+    margin-top: 1%;
+    //border: 2px solid infotext;
+    width: 100%;
+    height: 14%;
+}
+#jmmo2{
+    //border: 2px solid saddlebrown;
+    width: 74%;
+    height: 100%;
+    float:left;
+}
+#n{
+    //border:2px solid blue;
+    width: 25%;
+    height: 100%;
+    float:left;
+}
+.mmo{
+    //border:2px solid blue;
+    width: 19%;
+    height: 45%;
+}
+#d{
+    margin-top: 4%;
+    //border: 2px solid orange;
+    width: 100%;
+    height: 60%;
+    
+}
+.col{
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 14%;
+    height: 100%;
+    //border:2px solid blanchedalmond;
+    float:left;
+}
+.tit{
+    //border: 2px solid blue;
+    width: 100%;
+    height: 20%;
+}
+.cont{
+    //border: 2px solid indigo;
+    width: 100%;
+    height: 79%;
+}
+
