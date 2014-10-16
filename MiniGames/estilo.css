@@ -1,6 +1,7 @@
 
 /* 
-    Author     : RavenSoul
+    Created on : 21/09/2014, 11:54:26 AM
+    Author     : israel
 */
 
 body{
@@ -104,12 +105,32 @@ box-shadow: 0 0 22px #111111;
 height: 340px;
 margin: 100px auto 0;
 position: relative;
-width: 640px;
+width: 670px;
 float:start;
+}
+#minicajas1{
+background-color:#000;
+border: 1px solid #FFFFFF;
+box-shadow: 0 0 22px #111111;
+height: 100%;
+margin: 0%;
+position: relative;
+width: 40%;
+float: right;
+}
+#minicajas2{
+background-color:#000;
+border: 1px solid #FFFFFF;
+box-shadow: 0 0 22px #111111;
+height: 100%;
+margin: 0%;
+position: relative;
+width: 40%;
+float: left;
 }
 #presentacion ul{
 height: 320px;
-left: -30px;
+left: -15px;
 list-style: none outside none;
 overflow: hidden;
 position: absolute;
@@ -218,9 +239,6 @@ left: 25%;
     height: 7%;
     width: 100%;
 }
-
-
-
 
 #menu{
      width: 100%; 
@@ -342,6 +360,18 @@ left: 25%;
 	background:url(imagenes/png/radio42.png) no-repeat;
 	position:absolute;
 	left:44px;
+	top:27px;
+}
+#menu li a:hover #icono5{
+	
+}
+#login{
+    margin: 8% 0% 0% 0%;
+	width:10px;
+	height:17px;
+	display:block;
+        position:absolute;
+	right:100px;
 	top:27px;
 }
 #menu li a:hover #icono5{
