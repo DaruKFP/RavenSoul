@@ -5,52 +5,59 @@
         <title>Mini Games</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/estiloredes.css">
         <script src="funciones.js"></script>
         <script src="/jquery.js"></script>
         <script src="/presentacion.js"></script>
     </head>
     <body onload="Inicio()">
         <div id="caja1">
-            <aside id="cajaArriba">
-          
-</aside>
+            <header>
+            <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+         
+        </header>
             
             <aside id="cajabarra">
 
-                <nav id="menu">
-    	<ul>
-           
-        	<li><a href="#">
-            	<div id="icono1"></div>
-            	CATEGORIAS
-            </a></li>
-            
-            <li><a href="#">
-            	<div id="icono2"></div>
-            	CATALOGO
-            </a></li>
-            
-            <li><a href="#">
-            	<div id="icono3"></div>
-            	BLOG
-            </a></li>
-            
-            <li><a href="#">
-            	<div id="icono4"></div>
-            	CONTACTO
-            </a></li>
-            
-<li><a href="#">
-            	<div id="icono5"></div>
-            	RADIO
-            </a></li>
-            
-        
-        </ul>
-    </nav>                      
+                
+       <div class="container">
+
+            <ul id="nav">
+                <li><a href="#">Categorias</a></li>
+                <li><a class="hsubs" href="#">Catalogo</a>
+                 
+                </li>
+                <li><a class="hsubs" href="#">Blog</a>
+                    
+                </li>
+                <li><a class="hsubs" href="contacto.html">Contacto</a>
+                 
+                </li>
+                <li><a href="#">Radio</a></li>
+              
+                <li><a href="acerca de.html">Acerca de</a></li>
+                <div id="lavalamp"></div>
+            </ul>
+       </div>
+                      
               
             </aside>
+             <div id="Redesymas">
+       
+<ul id="navigationMenu">
+    
+    <li>
+	     <a class="services" href="https://www.facebook.com/ravensoulChID?fref=ts">
+            <span>Facebook</span>
+         </a>
+    </li>
+  
+
+</ul>
+</div>   
             
    
                 <div id="presentacion"> 
@@ -71,12 +78,21 @@
                     </section>
                
                 </section>
-                    
+                
             
             <section id="login">
-                <button style="width: 100%" onclick="abrir()">Inicio sesion</button>
-                <a href="nuevo.html"><button style="width: 100%">Usuario nuevo</button></a>
+               <!-- <button style="width: 100%" onclick="abrir()">Inicio sesion</button -->
+                
+                <li><a class="nuevo" href="nuevo.html">
+                        <img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" >
+                  <img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" >
+                  </a>
+                </li>
+              
             </section>
+            
+            
+              
             
             <footer id="terminos">
                 
@@ -84,7 +100,9 @@
                
             </footer>
             
-             <div id="cubierta"></div>
+            
+            
+            <div id="cubierta"></div>
              <div id="log">
                 <p>
                     Nombre de usuario:<input id="nUsuario" type="text"><br/>
@@ -93,6 +111,7 @@
                 <button type="button" onclick="iniF()">Iniciar</button>
                 <button type="button" onclick="cerrar()">Cancelar</button>
             </div>
-            </div> 
+   
+        </div> 
     </body>
 </html>

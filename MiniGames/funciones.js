@@ -1,6 +1,24 @@
 var vecI = ["imagenes/1.jpg","imagenes/2.jpg","imagenes/3.gif","imagenes/4.png","imagenes/5.jpg"];
 var cont = 0;
 
+//Scroll arriba
+ $(document).ready(function(){
+  
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+  
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+  
+    });
+
 function Inicio(){
 	carrucel();
 }
