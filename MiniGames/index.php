@@ -83,11 +83,11 @@
             <section id="login">
                <!-- <button style="width: 100%" onclick="abrir()">Inicio sesion</button -->
                 
-                <li><a class="nuevo" href="nuevo.html">
-                        <img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" >
-                  <img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" >
-                  </a>
+                <li>
+                    <a class="nuevo" href="nuevo.html"><img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" ></a>
+                    <img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" >
                 </li>
+                
               
             </section>
             
