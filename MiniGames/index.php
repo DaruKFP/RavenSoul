@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 
 <html>
     <head>
@@ -84,8 +84,52 @@
                <!-- <button style="width: 100%" onclick="abrir()">Inicio sesion</button -->
                 
                 <li>
-                    <a class="nuevo" href="nuevo.html"><img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" ></a>
-                    <img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" >
+					<?php
+						session_start();
+						if(!isset($_SESSION['inicio'])){
+					?>
+					<a class="nuevo" onclick="abrir()" > <img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" ></a>
+                    <a class="nuevo" href="nuevo.html"><img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" ></a>
+					<?php
+							if(isset($_POST['regreso_error'])){
+								$err = $_POST['regreso_error'];
+								switch($err){
+									case 1:
+					?>
+										<script>
+											var cub = document.getElementById("cubierta");
+											cub.style.display = "block";
+										</script>
+										<div id="ini_error">
+											<p>
+												<h1>ERROR: Usuario o contraseña incorrecta</h1>
+											</p>
+											<button type="button" onclick="cerrar_error()">Cancelar</button>
+										</div>
+					<?php
+									break;
+									case 2:
+					?>
+										<script>
+											var cub = document.getElementById("cubierta");
+											cub.style.display = "block";
+										</script>
+										<div id="ini_err">
+											<p>
+												<h1>ERROR: llene bien todos los campos</h1>
+											</p>
+											<button type="button" onclick="cerrar_error()">Cancelar</button>
+										</div>
+					<?php
+									break;
+								}
+							}
+						}else{
+							/*Falta codigo que me pasara isra*/
+							$usuario = $_SESSION['inicio'];
+							echo $usuario;
+						}
+					?>
                 </li>
                 
               
@@ -104,12 +148,14 @@
             
             <div id="cubierta"></div>
              <div id="log">
-                <p>
-                    Nombre de usuario:<input id="nUsuario" type="text"><br/>
-                    Contraseña: <input id="contra" type="password">
-                </p>
-                <button type="button" onclick="iniF()">Iniciar</button>
-                <button type="button" onclick="cerrar()">Cancelar</button>
+				<form method="post" action="php/funciones.php">
+					<p>
+						Nick:<input name="nick" type="text"><br/>
+						Contraseña: <input name="contra" type="password">
+					</p>
+					<button type="submit" name="opc" value="1">Iniciar</button>
+					<button type="button" onclick="cerrar()">Cancelar</button>
+				</form>
             </div>
    
         </div> 

@@ -147,12 +147,27 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	display: none;
 	opacity: 0.5;
 }
+#ini_error{
+	z-index: 5;
+    border: 3px solid slategrey;
+    position: absolute;
+    background-color: #FF0000;
+	opacity: 0.8;
+    padding-left:30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    display: none;
+    top: 40%;
+    left: 35%;
+}
+
 
 #log{
 	z-index: 5;
     border: 3px solid slategrey;
     position: absolute;
-    background-color: aquamarine;
+    background-color: red;
     padding-left:30px;
     padding-right: 30px;
     padding-top: 10px;

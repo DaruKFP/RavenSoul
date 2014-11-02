@@ -60,7 +60,14 @@ function cerrar(){
     men.style.display= "none";
 }
 
-function iniF(){
+function cerrar_error(){
+	var men = document.getElementById("ini_error");
+	var men2 = document.getElementById("log");
+	men.style.display= "none";
+	men2.style.display= "block";
+}
+
+/*function iniF(){
 	var usuario = document.getElementById("nUsuario");
 	var cub = document.getElementById("cubierta");
 	var men = document.getElementById("log");
@@ -68,4 +75,4 @@ function iniF(){
     men.style.display= "none";
     var log = document.getElementById("login");
     log.innerHTML = usuario.value;;
-}
+}*/
