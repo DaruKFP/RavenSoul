@@ -147,27 +147,12 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	display: none;
 	opacity: 0.5;
 }
-#ini_error{
-	z-index: 5;
-    border: 3px solid slategrey;
-    position: absolute;
-    background-color: #FF0000;
-	opacity: 0.8;
-    padding-left:30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 7px;
-    display: none;
-    top: 40%;
-    left: 35%;
-}
-
 
 #log{
 	z-index: 5;
     border: 3px solid slategrey;
     position: absolute;
-    background-color: red;
+    background-color: aquamarine;
     padding-left:30px;
     padding-right: 30px;
     padding-top: 10px;
@@ -415,15 +400,28 @@ left: 25%;
 #menu li a:hover #iconos5{
 	
 }
+/*CSS DE USUARIO*/
 #login{
     margin: 8% 0% 0% 0%;
-	width:100px;
-	height:65px;
+	width:8%;
+	height:15%;
 	display:block;
     position:absolute;
-	right:15px;
-	top:5px;
+	right:5%;
+	top: -1%;
+  background-color: #F5F5F5;
+        border-radius: 10%;
+       
+        box-shadow: 0 0 22px #F5F5F5;
+        background: url(usuarios/user1.gif) no-repeat;
+        background-size: 100%;
 }
+#usua{
+    position: absolute;
+    top: 80%;
+     color: #F5F5F5;
+}
+
 #redesociales{
 	width:50px;
 	height:150px;
