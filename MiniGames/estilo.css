@@ -136,18 +136,6 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	z-index: 3;
 }
 
-#cubierta{
-	z-index: 4;
-	position: absolute;
-	height: 1100px;
-	width: 100%;
-	left: 0px;
-	top: 0px;
-	background-color: grey;
-	display: none;
-	opacity: 0.5;
-}
-<<<<<<< HEAD
 #ini_error{
 	z-index: 5;
 	border: 3px solids slategrey;
@@ -162,6 +150,19 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	top: 40%;
 	left: 35%;
 }
+
+#cubierta{
+	z-index: 4;
+	position: absolute;
+	height: 1100px;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: grey;
+	display: none;
+	opacity: 0.5;
+}
+<<<<<<< HEAD
 =======
 >>>>>>> 81e1e4369fc390336fccf207e76b74b0ea49fb0f
 

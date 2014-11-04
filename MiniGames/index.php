@@ -116,9 +116,9 @@
 								}
 							}
 						}else{
-							/*Falta codigo que me pasara isra*/
+							
 							$usuario = $_SESSION['inicio'];
-							echo $usuario;
+							echo ("<li id='usua'>$usuario</li>");
 						}
 					?>
                 </li>
