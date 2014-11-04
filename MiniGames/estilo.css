@@ -147,6 +147,7 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	display: none;
 	opacity: 0.5;
 }
+<<<<<<< HEAD
 #ini_error{
 	z-index: 5;
 	border: 3px solids slategrey;
@@ -161,13 +162,19 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	top: 40%;
 	left: 35%;
 }
+=======
+>>>>>>> 81e1e4369fc390336fccf207e76b74b0ea49fb0f
 
 #log{
 	z-index: 5;
     border: 3px solid slategrey;
     position: absolute;
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color: blue;
+=======
+    background-color: aquamarine;
+>>>>>>> 81e1e4369fc390336fccf207e76b74b0ea49fb0f
 =======
     background-color: aquamarine;
 >>>>>>> 81e1e4369fc390336fccf207e76b74b0ea49fb0f
