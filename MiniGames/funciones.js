@@ -67,6 +67,13 @@ function cerrar_error(){
 	men2.style.display= "block";
 }
 
+function msj_error(){
+	var cubi = document.getElementById("cubierta");
+    cubi.style.display = "block";
+    var er = document.getElementById("ini_error");
+    er.style.display = "block";
+}
+
 /*function iniF(){
 	var usuario = document.getElementById("nUsuario");
 	var cub = document.getElementById("cubierta");

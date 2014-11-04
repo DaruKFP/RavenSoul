@@ -96,16 +96,7 @@
 								switch($err){
 									case 1:
 					?>
-										<script>
-											var cub = document.getElementById("cubierta");
-											cub.style.display = "block";
-										</script>
-										<div id="ini_error">
-											<p>
-												<h1>ERROR: Usuario o contraseña incorrecta</h1>
-											</p>
-											<button type="button" onclick="cerrar_error()">Cancelar</button>
-										</div>
+										<a onload="msj_error()"></a>
 					<?php
 									break;
 									case 2:
@@ -146,7 +137,7 @@
             
             
             
-            <div id="cubierta"></div>
+            
              <div id="log">
 				<form method="post" action="php/funciones.php">
 					<p>
@@ -157,7 +148,13 @@
 					<button type="button" onclick="cerrar()">Cancelar</button>
 				</form>
             </div>
-   
+            <div id="ini_error">
+                <p>
+                    <h1>ERROR: Usuario o contraseña incorrecta</h1>
+                </p>
+                <button type="button" onclick="cerrar_error()">Cancelar</button>
+            </div>
         </div> 
+        <div id="cubierta"></div>
     </body>
 </html>
