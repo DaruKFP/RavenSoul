@@ -1,0 +1,31 @@
+#cp{
+	//border: 2px solid orange;
+	margin-top: 6%;
+    width: 99%;
+    height: 85%;
+    padding: .5%;
+	background-color: lightslategray;
+    border-radius: 25px;
+}
+.filas{
+	//border: 2px solid black;
+	height: 90%;
+	width: 99%;
+	margin-left: 1.5%;
+}
+article{
+	height: 20%;
+}
+#paginas{
+	margin-top: 1%;
+	width: 99%;
+	height: 3%;
+	border: 2px solid white;
+}
+#terminos{
+    margin: 3% 0% 0% 0%;
+    background-color: #000;
+  
+    height: 7%;
+    width: 100%;
+}

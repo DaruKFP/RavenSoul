@@ -11,6 +11,7 @@ body{
 	background:-ms-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
 	background:-webkit-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
 	margin:23px 0;
+        
 }
 ul{
     list-style: none;
@@ -135,10 +136,25 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	z-index: 3;
 }
 
+#ini_error{
+	z-index: 5;
+	border: 3px solids slategrey;
+	position: absolute;
+	background-color: #FF0000;
+	opacity: 0.8;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 7px;
+	display: none;
+	top: 40%;
+	left: 35%;
+}
+
 #cubierta{
 	z-index: 4;
 	position: absolute;
-	height: 100%;
+	height: 1100px;
 	width: 100%;
 	left: 0px;
 	top: 0px;
@@ -396,18 +412,94 @@ left: 25%;
 	left:44px;
 	top:27px;
 }
-#menu li a:hover #icono5{
+#menu li a:hover #iconos5{
 	
 }
+/*CSS DE USUARIO*/
 #login{
     margin: 8% 0% 0% 0%;
-	width:100px;
-	height:65px;
+	width:10%;
+	height:15%;
 	display:block;
     position:absolute;
-	right:15px;
+	right:5%;
+	top: 5%%;
+}
+#login2{
+    margin: 8% 0% 0% 0%;
+	padding: 0px;
+	width:8%;
+	height:15%;
+	display:block;
+    position:absolute;
+	right:5%;
+	top: -1%;
+    background-color: #F5F5F5;
+    border-radius: 10%;
+    box-shadow: 0 0 22px #F5F5F5;
+    
+}
+#img_log{
+	margin-top:17%;
+	width:100%;
+	height:70%;
+	background: url(usuarios/user1.gif) no-repeat;
+    background-size: 100%;
+}
+
+#usua{
+	margin-left: 10%;
+    color: black;
+	width:100%;
+	height:29%;
+}
+
+#redesociales{
+	width:50px;
+	height:150px;
+        background-color: white;
+position: fixed;
+	right:1270px;
 	top:70px;
+        border-radius: 5%;
+}
+
+#facebook{
+
+    background:url(imagenes/redessociales/facebook1.png) no-repeat;
+    width:60px;
+	height:50px;
+        float: start;
+        margin: 15% 0% 0% 10%;
+        
+        
+        
+}
+#google{
+   
+    background:url(imagenes/redessociales/google1.png) no-repeat;
+    width:60px;
+	height:50px;
+        float: end;
+ margin: 40% 0% 0% 10%;
 }
 #menu li a:hover #icono5{
 	
+}
+
+
+
+/* Botón para Ir
+----------------------------------------------- */
+.scrollup{
+
+    text-indent:-9999px;
+	width:45px;
+	height:50px;
+        background-color: white;
+        position: fixed;
+        bottom: 200px;
+	right:10px;
+	top:550px;
+        background: url(imagenes/png/flechatop.png) no-repeat;
 }

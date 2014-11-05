@@ -1,6 +1,24 @@
 var vecI = ["imagenes/1.jpg","imagenes/2.jpg","imagenes/3.gif","imagenes/4.png","imagenes/5.jpg"];
 var cont = 0;
 
+//Scroll arriba
+ $(document).ready(function(){
+  
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+  
+        $('.scrollup').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+  
+    });
+
 function Inicio(){
 	carrucel();
 }
@@ -42,7 +60,21 @@ function cerrar(){
     men.style.display= "none";
 }
 
-function iniF(){
+function cerrar_error(){
+	var men = document.getElementById("ini_error");
+	var men2 = document.getElementById("log");
+	men.style.display= "none";
+	men2.style.display= "block";
+}
+
+function msj_error(){
+	var cubi = document.getElementById("cubierta");
+    cubi.style.display = "block";
+    var er = document.getElementById("ini_error");
+    er.style.display = "block";
+}
+
+/*function iniF(){
 	var usuario = document.getElementById("nUsuario");
 	var cub = document.getElementById("cubierta");
 	var men = document.getElementById("log");
@@ -50,4 +82,4 @@ function iniF(){
     men.style.display= "none";
     var log = document.getElementById("login");
     log.innerHTML = usuario.value;;
-}
+}*/
