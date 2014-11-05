@@ -142,12 +142,10 @@
             
              <div id="log">
 				<form method="post" action="php/funciones.php">
-					<p>
-						Nick:<input name="nick" type="text"><br/>
-						Contraseña: <input name="contra" type="password">
-					</p>
-					<button type="submit" name="opc" value="1">Iniciar</button>
-					<button type="button" onclick="cerrar()">Cancelar</button>
+					<p id="espacio">Nick:<input name="nick" placeholder="Nombre de usuario" type="text"><br/></p>
+					<p>Contraseña: <input name="contra" placeholder="Clave de seguridad" type="password"></p>
+					<button id="boton" type="submit" name="opc" value="1">Iniciar</button>
+					<button  id="boton2" type="button" onclick="cerrar()">Cancelar</button>
 				</form>
             </div>
             <div id="ini_error">
