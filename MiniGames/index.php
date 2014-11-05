@@ -80,7 +80,7 @@
                 </section>
                 
             
-            <section id="login">
+            <section>
                <!-- <button style="width: 100%" onclick="abrir()">Inicio sesion</button -->
                 
                 <li>
@@ -88,8 +88,10 @@
 						session_start();
 						if(!isset($_SESSION['inicio'])){
 					?>
-					<a class="nuevo" onclick="abrir()" > <img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" ></a>
-                    <a class="nuevo" href="nuevo.html"><img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" ></a>
+					<li id="login">
+						<a class="nuevo" onclick="abrir()" > <img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" ></a>
+						<a class="nuevo" href="nuevo.html"><img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" ></a>
+					</li>
 					<?php
 							if(isset($_POST['regreso_error'])){
 								$err = $_POST['regreso_error'];
@@ -118,7 +120,7 @@
 						}else{
 							
 							$usuario = $_SESSION['inicio'];
-							echo ("<li id='usua'>$usuario</li>");
+							echo ("<li id='login2'><section id='img_log'></section><section id='usua'>$usuario</section></li>");
 						}
 					?>
                 </li>
