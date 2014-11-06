@@ -1,16 +1,23 @@
 #cp{
 	//border: 2px solid orange;
 	margin-top: 6%;
-    width: 99%;
-    height: 85%;
-    padding: .5%;
+    width: 90%;
+    height: 75%;
+    
+   margin-left: 5%;
     background-color: #ffffff;
     border-radius: 25px;
+    box-shadow:  0 0 22px #666666;
+}
+#logo{
+    position: absolute;
+    top: -60%;
+ right: 80%;
 }
 .filas{
-	//border: 2px solid black;
-	height: 90%;
-	width: 99%;
+	
+	height: 100%;
+	width: 100%;
 	margin-left: 1.5%;
 }
 #flash{
@@ -27,7 +34,7 @@ article{
 	border: 2px solid white;
 }
 #terminos{
-    margin: 3% 0% 0% 0%;
+    margin: 18% 0% 0% 0%;
     background-color: #000;
   
     height: 7%;
