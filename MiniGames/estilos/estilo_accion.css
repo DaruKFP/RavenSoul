@@ -4,7 +4,7 @@
     width: 99%;
     height: 85%;
     padding: .5%;
-	background-color: lightslategray;
+    background-color: #ffffff;
     border-radius: 25px;
 }
 .filas{
@@ -12,6 +12,10 @@
 	height: 90%;
 	width: 99%;
 	margin-left: 1.5%;
+}
+#flash{
+ float:left;
+    width: 100%;
 }
 article{
 	height: 20%;
