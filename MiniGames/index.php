@@ -90,7 +90,7 @@
 					?>
 					<li id="login">
 						<a class="nuevo" onclick="abrir()" > <img src="imagenes/Up-Arrow-Icon.png" width="40" height="40" alt="Img 05" ></a>
-						<a class="nuevo" href="nuevo.html"><img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" ></a>
+						<a class="nuevo" href="nuevo.php"><img src="imagenes/Add-User-512.png" width="40" height="40" alt="Img 06" ></a>
 					</li>
 					<?php
 							if(isset($_POST['regreso_error'])){

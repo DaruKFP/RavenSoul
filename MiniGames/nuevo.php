@@ -51,16 +51,16 @@ and open the template in the editor.
             <div id="presentacion">
                 <legend><strong>Registrar</strong></legend>
                     <p>
-                        <label>Nombre de usuario </label>
-                        <input type="text" id="nombre" placeholder="Nombre de usuario" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">
+                        <label>Nick </label>
+                        <input type="text" id="nick" placeholder="Nick" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">
                   
                     <div id="fuente">     
              <br>
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d"> 
 		<p>
-                        <label>Edad</label>
-                        <input type="text" id="email" placeholder="Ingrese su edad" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre de usuario" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	 
          
                          <br>
@@ -70,37 +70,48 @@ and open the template in the editor.
                         <label>Sexo</label>
                         
                     </p>
-                    
-			
-                         
-                         <P ALIGN=center>Masculino<input type="radio">  Fmenino  <input type="radio"></P>
-              <HR ALIGN=center size="2" width="600" color="#6f9c9d">
+                         <P ALIGN=center>
+							<select>
+								<option>Masculino</option>
+								<option>Femenino</option>
+							</Select>
+						 </P>
+						 <HR ALIGN=center size="2" width="600" color="#6f9c9d">
 			<br>
                         <p>
                         <label>Contraseña</label>
-                        <input type="text" id="email" placeholder="Ingrese contraseña" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" name="contra" id="contra" placeholder="Ingrese contraseña" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
               <label>Reingrese la contrasela</label>
-                        <input type="text" id="email" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" name="rcontra" id="rcontra" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
              <HR ALIGN=center size="2" width="600" color="#6f9c9d">
                <p>
                    <label>Correo Electronico</label>
-                        <input type="text" id="email" placeholder="ingrese su email" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" name="email" id="email" placeholder="ingrese su email" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
              <HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
                    <label>Reingrese el Correo Electronico</label>
-                        <input type="text" id="email" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
-                    </p>	
+                        <input type="text" name="remail" id="remail" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                    </p>
+
+				<HR ALIGN=center size="2" width="600" color="#6f9c9d">
+              <p>
+                   <label>Fecha de nacimiento</label>
+                        <input type="text" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="dd-mm-aaaa" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                    </p>
+					<HR ALIGN=center size="2" width="600" color="#6f9c9d">
+					<label> Descripcion </label>
+						<textarea id="descripcion" name="descripcion" style="resize:none;" rows="5" cols="20" placeholder="escribe tu descripcion"></textarea>
                         </div>
              
              <div id="botonaceptar">
