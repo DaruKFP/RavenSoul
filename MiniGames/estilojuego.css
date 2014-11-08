@@ -1,0 +1,67 @@
+body{
+    background:#111 no-repeat;
+}
+#logo{
+    margin-left: 40%;
+}
+#caja
+{
+background-color:;
+height:1150px;
+width: 100%;
+border-style: double;
+}
+#caja2{
+    margin-top: 7%;
+    margin-left: 5%;
+    background-color: #ffffff;
+height: 20%;
+width:90%;
+border-radius: 2%;
+box-shadow:  0 0 22px #666666;
+}
+
+#caja3{
+    background-color: #ffffff;
+height: 55%;
+width:99.5%;
+border:double;
+float: left;
+}
+/*caja de texto*/
+#caja4{
+    background-color:;
+height: 23.5%;
+width: 99.5%;
+float:left;
+
+}
+/*sugerencias para juegos*/
+#cajatres1{
+    background-color: #9900cc;
+height:99.5%;
+width: 20%;
+float:left;
+
+}
+#cajatres2{
+		background-color:;
+height:99.5%;
+width: 60.6%;
+float:left;
+border:double;
+}
+#cajatres3{
+	background-color:;
+height:99.5%;
+width: 25%;
+float:left;
+border:double;
+}
+ input{
+width: 500px;
+height: 155px;
+border-style: double;
+border-radius: 6px;
+
+   }
