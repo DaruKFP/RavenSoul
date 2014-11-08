@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2014-11-08 15:50:43
+Date: 2014-11-08 15:58:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,7 +80,6 @@ CREATE TABLE `usuarios` (
   `tipo_de_usuario` varchar(25) NOT NULL,
   `nombre` varchar(40) NOT NULL,
   `contraseña` varchar(50) NOT NULL,
-  `edad` int(11) NOT NULL,
   `sexo` char(1) NOT NULL,
   `correo_electronico` varchar(50) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
