@@ -10,13 +10,14 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilologin.css">
-
+		<script src="funciones.js"></script>
+		
     </head>
-        <body onload="Inicio()">
+        <body>
        
              <div id="caja1">
                 <header>
-                    <a href="index.html">
+                    <a href="index.php">
             <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
          </a>
         </header>
@@ -49,10 +50,11 @@ and open the template in the editor.
             
        
             <div id="presentacion">
+			<form method="post" name="Formulario">
                 <legend><strong>Registrar</strong></legend>
                     <p>
                         <label>Nick </label>
-                        <input type="text" id="nick" placeholder="Nick" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">
+                        <input onkeypress="chequear()" type="text" id="nick" name="nick" placeholder="Nick" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">
                   
                     <div id="fuente">     
              <br>
@@ -60,7 +62,7 @@ and open the template in the editor.
               <HR ALIGN=center size="2" width="600" color="#6f9c9d"> 
 		<p>
                         <label>Nombre</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre de usuario" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" onkeypress="prueba('nombre')" name="nombre" id="nombre" placeholder="Nombre de usuario" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	 
          
                          <br>
@@ -80,14 +82,14 @@ and open the template in the editor.
 			<br>
                         <p>
                         <label>Contraseña</label>
-                        <input type="text" name="contra" id="contra" placeholder="Ingrese contraseña" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="password" onkeypress="prueba('contra')" name="contra" id="contra" placeholder="Ingrese contraseña" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
-              <label>Reingrese la contrasela</label>
-                        <input type="text" name="rcontra" id="rcontra" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+              <label>Reingrese la contraseña</label>
+                        <input type="password" name="rcontra" id="rcontra" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
@@ -115,7 +117,7 @@ and open the template in the editor.
                         </div>
              
              <div id="botonaceptar">
-             <img src="imagenes/registrar.png" width="95" height="40" alt="Img01" >
+             <button type="button" name="opc" id="bt" value="2" onclick="prueba()" style="display:none;"><img src="imagenes/registrar.png" width="95" height="40" alt="Img01"></button>
              </div>
             </div>
 		
@@ -125,7 +127,7 @@ and open the template in the editor.
                 <font color="#f0f0f6" size="2" face="Myriad Pro,Bold MS Sans Serif">terminos y usos de condiciones politica y privacidad © 2014 diseñado por minigames  <address>www.minigames.com </address> </font>
                
             </footer>
-              
+              </form>
         </div>
       </body>
     

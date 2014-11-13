@@ -74,6 +74,28 @@ function msj_error(){
     er.style.display = "block";
 }
 
+function prueba(cad){
+	//location.href="php/funciones.php";
+	var r1 = document.getElementById(cad).value;
+	var b1 = document.getElementById("bt");
+	if(r1.length>4){
+		b1.style.display = "block";
+	}else{
+		b1.style.display = "none";
+	}
+}
+
+
+function chequear() {
+var k = event.charCode;  //String.fromCharCode(event.charCode);
+
+if( (k>64 && k < 91) || (k>96 && k < 123) || (k>47 && k <58)){
+
+}else{
+event.returnValue=false;
+}
+}
+
 /*function iniF(){
 	var usuario = document.getElementById("nUsuario");
 	var cub = document.getElementById("cubierta");
