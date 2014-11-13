@@ -178,3 +178,24 @@ height: 155px;
 
 border-radius: 6px;
    }
+   
+#comentario{
+    margin-left: 2%;
+    width: 50%;
+    height: 60%;
+    box-shadow:  0 0 22px #666666;
+}
+#usuar{
+    width: 100%;
+    height: 30%;
+    background-color: #3399ff;
+}
+#usuaint{
+    color: white;
+    margin-left: 3%;
+    font-size: 110%;
+}
+#cajacomentario{
+    width: 100%;
+    height: 67%;
+}
