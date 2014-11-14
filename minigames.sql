@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2014-11-08 15:58:03
+Date: 2014-11-10 14:04:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,6 +40,7 @@ CREATE TABLE `comentario_juego` (
   `folio` int(11) NOT NULL AUTO_INCREMENT,
   `id_juego` int(11) NOT NULL,
   `nick` varchar(50) NOT NULL,
+  `comentario` varchar(100) NOT NULL,
   PRIMARY KEY (`folio`),
   KEY `id_juego1` (`id_juego`),
   KEY `nick1` (`nick`),
@@ -62,6 +63,9 @@ CREATE TABLE `juegos` (
   `tipo` varchar(20) NOT NULL,
   `descripcion` varchar(50) NOT NULL,
   `puntuacion` int(11) DEFAULT NULL,
+  `intrucciones` varchar(25) NOT NULL,
+  `dir_juego` varchar(30) NOT NULL,
+  `dir_imagen` varchar(50) NOT NULL,
   PRIMARY KEY (`id_juego`),
   KEY `tipo_de_usuario` (`tipo_de_usuario`),
   CONSTRAINT `tipo_de_usuario` FOREIGN KEY (`tipo_de_usuario`) REFERENCES `usuarios` (`tipo_de_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
