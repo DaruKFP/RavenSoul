@@ -142,9 +142,9 @@
             
              <div id="log">
 				<form method="post" action="php/funciones.php">
-					<p id="espacio">Nick:<input name="nick" placeholder="Nombre de usuario" type="text"><br/></p>
-					<p>Contraseña: <input name="contra" placeholder="Clave de seguridad" type="password"></p>
-					<button id="boton" type="submit" name="opc" value="1">Iniciar</button>
+					<p id="espacio" >Nick:<input onkeydown="chequearr('0')" onkeypress="chequear('0')" onchange="prueba2()" id="nick" name="nick" placeholder="Nombre de usuario" type="text"><br/></p>
+					<p>Contraseña: <input onkeydown="chequearr('0')" onkeypress="chequear('0')" onchange="prueba2()" id="contra" name="contra" placeholder="Clave de seguridad" type="password"></p>
+					<button id="boton" type="submit" name="opc" value="1" style="display:none;">Iniciar</button>
 					<button  id="boton2" type="button" onclick="cerrar()">Cancelar</button>
 				</form>
             </div>

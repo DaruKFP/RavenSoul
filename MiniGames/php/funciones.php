@@ -46,6 +46,7 @@
 					$nombre= $_POST['nombre'];
 					$contra= $_POST['contra'];
 					$email= $_POST['email'];
+					$sexo= $_POST['sexo'];
 					$fecha = $_POST['fecha_nacimiento'];
 					$descripcion = $_POST['descripcion'];
 					
@@ -61,7 +62,7 @@
 					echo("ya existe :/ <br>");
 					}else{
 					echo("va a guardar :/");
-					$res = mysqli_query($conexion, "insert into usuarios values('$nick','reg','$nombre',password('$contra'),21,'M','$email','$fecha','$descripcion');");
+					$res = mysqli_query($conexion, "insert into usuarios values('$nick','reg','$nombre',password('$contra'),21,'$sexo','$email','$fecha','$descripcion');");
 					if($lector = mysqli_fetch_array($res)){
 					echo("<script> alert('Guardado correctamente');</script>");
 					}else{
