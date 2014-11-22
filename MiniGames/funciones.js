@@ -75,6 +75,7 @@ function msj_error(){
 }
 
 function prueba(){
+
 	//location.href="php/funciones.php";
 	var r1 = document.getElementById("nick").value;
 	var r2 = document.getElementById("nombre").value;
@@ -84,9 +85,9 @@ function prueba(){
 	var r6 = document.getElementById("remail").value;
 	var r7 = document.getElementById("fecha_nacimiento").value;
 	var r8 = document.getElementById("descripcion").value;
-	
 	var b1 = document.getElementById("bt");
-	if(r1.length>3 && r2.length>4 && r3.length>3 && r4.length>3 && r5.length>8 && r6.length>8 && r7.length>8 && r8.length>4){
+	
+	if(r1.length>3 && r2.length>4 && r3.length>3 && r4.length>3 && r5.length>8 && r6.length>8 && r7.length!="" && r8.length>4){
 		
 		var v1 = false;
 		var v2 = false;
@@ -127,32 +128,59 @@ function prueba2(){
 		b1.style.display = "none";
 	}
 }
+function prueba3(){
+//prompt("entro","");
+	var r1 = document.getElementById("nombre").value;
+	var r2 = document.getElementById("email").value;
+	var r3 = document.getElementById("tema").value;
+	var r4 = document.getElementById("comentario").value;
+	var b1 = document.getElementById("boton");
+//	prompt("r1 "+r1+" r2 "+r2+" r3 "+r3+" r4 "+r4);
+	
+	if(r1.length>4 && r2.length>8 && r3.length>4 && r4.length>4){
+		b1.style.display = "block";
+	}else{
+		b1.style.display = "none";
+	}
+}
 
 function chequearr(p) {
 
-if(event.keyCode==8){
-if(p==1)
-prueba();
-else
-prueba2();
-}
-if(event.keyCode==127){
-prompt("se dio delete xD","");
-}
-
+	if(event.keyCode==8){
+		switch(p){
+			case '0':
+				prueba2();
+			break;
+			case '1':
+				prueba();
+			break;
+			case '2':
+				prueba3();
+			break;
+		}
+	}
+	if(event.keyCode==127){
+		prompt("se dio delete xD","");
+	}
 }
 
 function chequear(p) {
-var k = event.charCode;  //String.fromCharCode(event.charCode);
-//prompt(k,"");
-if( !(k==34 || k==39 || k==61 || k==40 || k==41 || k==91 || k==93 ||k==123 || k==125) ){
-	if(p==1)
-	prueba();
-	else
-	prueba2();
-}else{
-event.returnValue=false;
-}
+	var k = event.charCode;  //String.fromCharCode(event.charCode);
+	if( !(k==34 || k==39 || k==61 || k==40 || k==41 || k==91 || k==93 ||k==123 || k==125) ){
+		switch(p){
+			case '0':
+				prueba2();
+			break;
+			case '1':
+				prueba();
+			break;
+			case '2':
+				prueba3();
+			break;
+		}
+	}else{
+		event.returnValue=false;
+	}
 }
 
 

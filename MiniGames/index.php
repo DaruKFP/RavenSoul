@@ -26,14 +26,14 @@
        <div class="container">
 
             <ul id="nav">
-                <li><a href="#">Categorias</a></li>
+                <li><a href="juego.php">Categorias</a></li>
                 <li><a class="hsubs" href="#">Catalogo</a>
                  
                 </li>
                 <li><a class="hsubs" href="#">Blog</a>
                     
                 </li>
-                <li><a class="hsubs" href="contacto.html">Contacto</a>
+                <li><a class="hsubs" href="contacto.php">Contacto</a>
                  
                 </li>
                 <li><a href="#">Radio</a></li>
@@ -120,7 +120,14 @@
 						}else{
 							
 							$usuario = $_SESSION['inicio'];
-							echo ("<li id='login2'><section id='img_log'></section><section id='usua'>$usuario</section></li>");
+							$conexion = mysqli_connect("localhost", "root", "", "minigames");
+							$res = mysqli_query($conexion, "select tipo_de_usuario from usuarios where nick='$usuario';");
+							if($res == "admin" || $res == "prog"){
+								$ft = "background: url(usuarios/user1.gif) no-repeat";
+							}else{
+								$ft = "background: url(usuarios/iconuser2.png) no-repeat";
+							}
+							echo ("<li id='login2'><section id='img_log' style='$ft'></section><section id='usua'>$usuario</section></li>");
 						}
 					?>
                 </li>

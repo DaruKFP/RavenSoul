@@ -50,7 +50,7 @@ and open the template in the editor.
             
        
             <div id="presentacion">
-			<form method="post" name="Formulario">
+			<form method="post" name="Formulario" action="php/funciones.php">
                 <legend><strong>Registrar</strong></legend>
                     <p>
                         <label>Nick </label>
@@ -109,7 +109,7 @@ and open the template in the editor.
 				<HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
                    <label>Fecha de nacimiento</label>
-                        <input type="text" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="dd-mm-aaaa" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="date" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="dd-mm-aaaa" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>
 					<HR ALIGN=center size="2" width="600" color="#6f9c9d">
 					<label> Descripcion </label>
@@ -117,7 +117,7 @@ and open the template in the editor.
                         </div>
              
              <div id="botonaceptar">
-             <button type="button" name="opc" id="bt" value="2" onclick="prueba()" style="display:none;"><img src="imagenes/registrar.png" width="95" height="40" alt="Img01"></button>
+             <button type="submit" name="opc" id="bt" value="2" style="display:none;"><img src="imagenes/registrar.png" width="95" height="40" alt="Img01"></button>
              </div>
             </div>
 		
