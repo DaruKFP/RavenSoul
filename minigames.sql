@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : mysql
-Source Server Version : 50621
-Source Host           : localhost:3307
+Source Server         : mysql_wamp
+Source Server Version : 50617
+Source Host           : localhost:3306
 Source Database       : minigames
 
 Target Server Type    : MYSQL
-Target Server Version : 50621
+Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2014-11-10 14:04:53
+Date: 2014-11-23 23:02:33
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,13 +24,14 @@ CREATE TABLE `comentarios` (
   `id_juego` int(11) NOT NULL,
   `nick` varchar(50) NOT NULL,
   `comentario` varchar(150) NOT NULL,
+  `num_com` int(2) DEFAULT NULL,
+  `com_ant` int(2) DEFAULT NULL,
+  PRIMARY KEY (`id_comentario`),
   KEY `id_juego` (`id_juego`),
-  CONSTRAINT `id_juego` FOREIGN KEY (`id_juego`) REFERENCES `juegos` (`id_juego`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `nick` (`nick`),
+  CONSTRAINT `id_juego` FOREIGN KEY (`id_juego`) REFERENCES `juegos` (`id_juego`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `nick` FOREIGN KEY (`nick`) REFERENCES `usuarios` (`nick`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of comentarios
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for comentario_juego
@@ -49,10 +50,6 @@ CREATE TABLE `comentario_juego` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of comentario_juego
--- ----------------------------
-
--- ----------------------------
 -- Table structure for juegos
 -- ----------------------------
 DROP TABLE IF EXISTS `juegos`;
@@ -61,19 +58,15 @@ CREATE TABLE `juegos` (
   `tipo_de_usuario` varchar(25) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `tipo` varchar(20) NOT NULL,
-  `descripcion` varchar(50) NOT NULL,
+  `descripcion` varchar(320) NOT NULL,
   `puntuacion` int(11) DEFAULT NULL,
-  `intrucciones` varchar(25) NOT NULL,
+  `intrucciones` varchar(100) NOT NULL,
   `dir_juego` varchar(30) NOT NULL,
   `dir_imagen` varchar(50) NOT NULL,
   PRIMARY KEY (`id_juego`),
   KEY `tipo_de_usuario` (`tipo_de_usuario`),
   CONSTRAINT `tipo_de_usuario` FOREIGN KEY (`tipo_de_usuario`) REFERENCES `usuarios` (`tipo_de_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of juegos
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for usuarios
@@ -91,7 +84,3 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`nick`),
   KEY `tipo_de_usuario` (`tipo_de_usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of usuarios
--- ----------------------------

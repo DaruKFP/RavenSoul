@@ -114,7 +114,7 @@ body{
 #t{
     margin: 0 auto;
     width: 98%;
-    height: 1300px;
+    height: 1600px;
     //border: 2px solid red;
     //padding: 1%;
 }
@@ -172,7 +172,7 @@ body{
     margin-top: 6%;
     //border: 2px solid black;
     width: 99%;
-    height: 32%;
+    height: 25%;
     padding: .5%;
     
     background-color: #ffffff;
@@ -299,15 +299,15 @@ article{
 #d{
     margin-top: 4%;
     //border: 2px solid orange;
-    width: 100%;
-    height: 44%;
+    width: 99%;
+    height: 55%;
     margin-left: 1%;
 }
 .col{
-    margin-right: 1%;
-    margin-left: 1%;
-    width: 14%;
-    height: 100%;
+    margin-right: 3.5%;
+    margin-bottom: 1.5%;
+    width: 21.5%;
+    height: 49%;
     
     background-color: #ffffff;
     border-radius: 25px;
@@ -317,21 +317,23 @@ article{
 .tit{
     //border: 2px solid blue;
     width: 100%;
-    height: 10%;
+    height: 20%;
     text-align: center;
 }
 .titc{
     width: 40%;
     height: 20%;
-    float: top;
+    //float: top;
+    //border: 1px solid red;
     margin: 0 auto;
 }
 .cont{
     //border: 2px solid indigo;
-    height: 79%;
+    height: 80%;
+    margin-top: 2%;
 }
 .elcol{
-    height: 10%;
+    height: 12%;
     width: 99%;
     margin-bottom: 5%;
     //border: 1px solid red;
@@ -370,5 +372,6 @@ article{
     height: 96%;
     margin: 0%;
     padding: 0%;
-    //border: 1px solid red;
+    float: none;
+    //border: 1px solid yellow;
 }
