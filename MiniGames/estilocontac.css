@@ -37,7 +37,6 @@ margin-left: 4%;
 
 }
 .imag{
-    
  width: 100%;
  height: 100%;
 }
@@ -54,6 +53,7 @@ margin-left: 4%;
 }
 #comentar1{
 // margin-top: -11%;
+    margin-top: 1.5%;
     float: left;
     width: 30%;
     height: 50%;
@@ -65,9 +65,10 @@ margin-left: 4%;
         
 }
 #persona{
-    background-color: yellow;
+    //background-color: yellow;
     width: 10%;
-    height: 60%;
+    height: 100%;
+    //max-height: max-content;
 }
 #comentariopersona{
     color: #666666;
@@ -82,14 +83,14 @@ margin-left: 4%;
     //border: 1px solid red;
     float: left;
     width: 100%;
-    overflow: auto;
+    //overflow: auto;
     height: 90%;
     padding: 0%;
 }
 #userpersona{
     color: white;
     width: 100%;
-    height: 35%;
+    height: 45%;
 }
 #post{
     //border: 3px solid black;
@@ -99,8 +100,10 @@ margin-left: 4%;
     margin: 0%;
     width: 98%;
     height: 30%;
+    max-height: max-content;
     float: right;
     overflow:auto;
+    margin-bottom: 2.5%;
 }
 #post1{
     border: 1px solid black;
@@ -109,14 +112,16 @@ margin-left: 4%;
     margin-left: 4%;
     margin: 0%;
     width: 85%;
-    height: 30%;
+    height: 40%;
+    //max-height: max-content;
     float: right;
-    overflow:auto;
+    //overflow:auto;
 }
 .comentarios{
     float:left;
     width: 100%;
-    height: 50%;
+    height: 10%;
+    //max-height:min-content;
 }
 .expandirContraerCSS {
     font-family:Arial helvetica; 
