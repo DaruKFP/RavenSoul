@@ -113,11 +113,12 @@ and open the template in the editor.
                     </p>
 					<HR ALIGN=center size="2" width="600" color="#6f9c9d">
 					<label> Descripcion </label>
-						<textarea id="descripcion"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="descripcion" style="resize:none;" rows="5" cols="20" placeholder="escribe tu descripcion"></textarea>
+						<textarea id="descripcion"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="descripcion" style="resize:none;" rows="3" cols="30" placeholder="escribe tu descripcion"></textarea>
                         </div>
              
              <div id="botonaceptar">
-             <button type="submit" name="opc" id="bt" value="2" style="display:none;"><img src="imagenes/registrar.png" width="95" height="40" alt="Img01"></button>
+             <button type="submit" name="opc" id="bt" value="2"><img src="imagenes/registrar.png" width="95" height="40" alt="Img01"></button>
+             <!-- style="display:none;" -->
              </div>
             </div>
 		

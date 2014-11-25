@@ -194,8 +194,8 @@ header {
 
 #botonaceptar{
 margin: 0% 0% 0% 0%;
-left:200px;
-top: 580px;
+left:45%;
+top: 145%;
 position: absolute;
 }
 
@@ -205,10 +205,10 @@ position: absolute;
     color: #c5c7c7;
 border: 1px solid #FFFFFF;
 box-shadow: 0 0 22px #717171;
-height: 670px;
+height: 88%;
 margin: 100px auto 0;
-position: relative;
-width: 670px;
+//position: relative;
+width: 50%;
 float:start;
 }
 #minicajas1{
