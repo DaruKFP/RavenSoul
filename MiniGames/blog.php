@@ -136,7 +136,7 @@
                                         //<font face="Comic Sans MS" size="3">
                                     echo "<textarea id='comentar' name='comentar' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c'>";
                                         echo "</textarea>";
-                                        echo"<button class='btncomentar' type='submit' value='$btn' name='btn' id='btn' >Comentar</button>";
+                                        echo"<button class='btncomentar' type='submit' value='$btn' name='btn' id='btn' ></button>";
                                         
                                     echo"</form>";
                         echo "</div>";
@@ -148,7 +148,7 @@
                                         //<font face="Comic Sans MS" size="3">
                                     echo "<textarea id='comentar' name='comentar' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c'>";
                                         echo "</textarea>";
-                                        echo"<button class='btncomentar' type='submit' value='0' name='btn' id='btn'>Comentar</button>"; 
+                                        echo"<button class='btncomentar' type='submit' value='0' name='btn' id='btn'></button>"; 
                                     echo"</form>";
                         echo "</div>";
                }
