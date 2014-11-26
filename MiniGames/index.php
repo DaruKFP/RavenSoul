@@ -12,6 +12,7 @@
         <script src="funciones.js"></script>
         <script src="/jquery.js"></script>
         <script src="/presentacion.js"></script>
+        <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/> 
     </head>
     <body onload="Inicio()">
         <div id="caja1">
