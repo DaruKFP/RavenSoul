@@ -20,7 +20,11 @@
             <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
          
         </header>
-            
+
+<?php
+    include "barramenu.php";
+?>
+            <!--Comienza menu
             <aside id="cajabarra">
 
                 
@@ -44,6 +48,7 @@
             </ul>
        </div>
                       
+                      Termina menu-->
               
             </aside>
              <div id="Redesymas">
@@ -86,7 +91,7 @@
                 
                 <li>
 					<?php
-						session_start();
+						//session_start();
 						if(!isset($_SESSION['inicio'])){
 					?>
 					<li id="login">
@@ -120,7 +125,7 @@
 							}
 						}else{
 							
-							$usuario = $_SESSION['inicio'];
+							
 							$conexion = mysqli_connect("localhost", "root", "", "minigames");
 							$res = mysqli_query($conexion, "select tipo_de_usuario from usuarios where nick='$usuario';");
 							if($res == "admin" || $res == "prog"){
