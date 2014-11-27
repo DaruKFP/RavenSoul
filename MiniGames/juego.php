@@ -3,6 +3,7 @@
 	<title>pagina juegos</title>
         <link rel="stylesheet" type="text/css" href="estilojuego.css">
 		<script src="carrucel2.js"></script>
+                <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
 </head>
 <body onload="inicio()">
 	<div id="caja">
@@ -35,9 +36,9 @@
 			?>
                     <img class="portadalogo" src="<?php echo($direccion_imagen) ?>;">
           
-                    <h1>Descripcion</h1>
+                    <h1>Descripcion:</h1>
                     <h4> <?php echo($descripcion); ?></h4>
-                    <h1>Instrucciones</h1>
+                    <h1>Instrucciones:</h1>
                     <h4><?php echo($instrucciones); ?></h4>
 					
             </aside>
