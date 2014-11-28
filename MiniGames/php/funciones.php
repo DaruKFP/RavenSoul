@@ -9,12 +9,13 @@
 			break;
 			case 1:
 				if(isset($_POST['nick']) && isset($_POST['contra'])){
-					session_start();
+					//session_start();
 					$nick = $_POST['nick'];
 					$pass = $_POST['contra'];
 					$conexion = mysqli_connect("localhost", "root", "", "minigames");
 					$res = mysqli_query($conexion, "select * from usuarios where nick='$nick' and contraseña=password('$pass');");
 					if($lector = mysqli_fetch_array($res)){
+						session_start();
 						$_SESSION['inicio'] = $nick;
 						header("Location: ../index.php");
 					}else{
@@ -27,7 +28,7 @@
 					mysqli_close($conexion);
 				}else{
 					/*Falta contraseña o nick*/
-					echo("<output name='regreso_error' value=´2´></output>");
+					//echo("<output name='regreso_error' value=´2´></output>");
 					/*header("Location: ../index.php");*/
 				}
 			break;

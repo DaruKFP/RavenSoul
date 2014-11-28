@@ -142,3 +142,6 @@ p.note{
 	text-align:center;
 	margin:50px;
 }
+li{
+	list-style: none;
+}

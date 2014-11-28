@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilocontac.css">
 		<script src="funciones.js"></script>
-
+        <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
             <div id="caja1">

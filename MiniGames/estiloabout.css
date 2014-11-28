@@ -223,3 +223,17 @@ footer{
 float: right;
     margin-right: 20%;
 }
+#contlogo1{
+        background-color: gainsboro;
+    float: right;
+    width: 20%;
+    height: 40%;
+    box-shadow: 0 -1px 4px #0066ff;
+}
+#contlogo2{
+    background-color: gainsboro;
+    float: right;
+    width: 20%;
+    height: 40%;
+    box-shadow: 0 -1px 4px #0066ff;
+}
