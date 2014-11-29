@@ -37,6 +37,7 @@
                 <li><a class="hsubs" href="contacto.php">Contacto</a></li>
                 <li><a href="#">Radio</a></li>
                 <li><a href="acerca de.html">Acerca de</a></li>
+                
                 <div id="lavalamp"></div>
             </ul>
        </div>
@@ -53,7 +54,13 @@
                     <li><a class="hsubs" href="contacto.html">Contacto</a></li>
                     <li><a href="#">Radio</a></li>
                     <li><a href="acerca de.html">Acerca de</a></li>
-                    <li><a href="acerca de.html">Administrador</a></li>
+                    <li><a href="acerca de.html">Administrador</a>
+                       <ul class="subs">
+                        <li><a href="#">Juegos</a></li>
+                        <li><a href="#">Usuarios</a></li>
+                       
+                    </ul>
+                    </li>
                     <div id="lavalamp"></div>
                 </ul>
             </div>
