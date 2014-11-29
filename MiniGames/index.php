@@ -9,13 +9,15 @@
         <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="css/estiloredes.css">
-        
         <script src="funciones.js"></script>
-        <script src="/jquery.js"></script>
         <script src="/presentacion.js"></script>
+			<script src="jquery.js"></Script>
+		    <script type="text/javascript" src="slick.min.js"></script>
+				<link rel="stylesheet" type="text/css" href="slick.css"/>
+				
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/> 
     </head>
-    <body onload="Inicio()">
+    <body>
         <div id="caja1">
             <header>
                 <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
@@ -30,19 +32,46 @@
                     </li>
                 </ul>
             </div>
-            <div id="presentacion"> 
-                <div id="minicajas1" onclick="clc1()"></div>
-                <div id="minicajas2" onclick="clc1()"></div>
+            <div id="presentacion" class="c"> 
+			<?php
+			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$res = mysqli_query($conexion, "select portada,nombre from juegos;");
+			while($lector = mysqli_fetch_array($res)){
+			$portada = $lector["portada"];
+			$nombre =$lector["nombre"];
+			echo "<div><a href='juego.php?nombre=$nombre'><img src='$portada'  style='height:100%; width:100%;'></a></div>";
+			}
+			?>
+			  
             </div>
+			<script>
+$('.c').slick({
+autoplay:true,
+autoplaySpeed: 1500
+});
+arrows: true;
+  </script>
+  
             <section id="list">
                 <section id="izq">
-                    <article id="art1"> <ul> <li><img src="imagenes/c1.png" width="220" height="300" alt="Img 01" ></li> </ul> </article>
-                    <article id="art2"> <ul> <li><img src="imagenes/c2.png" width="220" height="300" alt="Img 02" ></li></ul> </article>
-                </section>
-                <section id="der">
-                    <article id="art3"><ul> <li><img src="imagenes/c3.png" width="220" height="300" alt="Img 03" ></li> </ul></article>
-                    <article id="art4"><ul> <li><img src="imagenes/c4.png" width="220" height="300" alt="Img 04" ></li></ul> </article>
-                </section>
+				<?php
+				$cont=0;
+			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$res = mysqli_query($conexion, "select dir_imagen,nombre from juegos;");
+			while($lector = mysqli_fetch_array($res)){
+			$cont++;
+			$portada = $lector["dir_imagen"];
+			$nombre = $lector["nombre"];
+			if($cont%2){ 
+			echo "<article id='art1'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li> </ul> </article>";
+         }else{
+                echo"</section>";
+                echo"<section id='der'>";
+                echo"<article id='art3'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li></ul></article>";      
+				echo" </section>";
+			}
+			}
+			?>
             </section>
             <!--<section>
                 <li>
