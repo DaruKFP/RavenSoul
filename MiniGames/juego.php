@@ -3,6 +3,7 @@
 	<title>pagina juegos</title>
         <link rel="stylesheet" type="text/css" href="estilojuego.css">
 		<script src="carrucel2.js"></script>
+        
 </head>
 <body onload="inicio()">
 	<div id="caja">
@@ -59,20 +60,29 @@
 </header>
 
 </aside>
-<aside id="caja4">
-     <h3>Queremos saber tu opinion</h3>
-    <h3>Puntua</h3>
-    <img class="manitas" src="botones/like.png" hspace=0>
-    <img class="manitas" src="botones/no like.png">
-    
-    <h3>Comenta  <input type="text" id="tema" placeholder="Tema" cols="40" rows="5" style="width:40%;height:20%;font-size:12px;font-family:Comic Sans MS;color: #484c4c;asdas">
-     <img class="comentar" src="botones/comentar.png">
-    </h3> 
-   
-</aside>
-            </section>
-	</div>
+</section>
+<h3>Queremos saber tu opinion</h3>
+<h3>Puntua</h3>
+<form class="nada">
+    <?php
+    include "php/cargar.php";
+    cargar($id);
+    ?>
+
+
+</form>
+<section>
+        <?php
+            //crea_com();
+        include "php/nuevo.php";
+        ?>
+    </section>
+</div>
+
+            
+	
 
 
 </body>
+
 </html>

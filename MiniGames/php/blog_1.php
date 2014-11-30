@@ -1,6 +1,10 @@
 <?php
+                
+
+                        if(session_start()){
+                    $user = $_SESSION['inicio'];
+                    //echo "$user";    
                     if(isset($_POST['btn'])){
-                        echo "<script>alert('$com_ant');</<script>";
                         $btn= $_POST['btn'];
                         $comentario_nuevo= $_POST['comentar'];
                         $conexion = mysqli_connect("localhost", "root", "", "minigames");
@@ -13,9 +17,13 @@
                         $num_com=$num_com+=1;
                         mysqli_free_result($res);
 
-                          $res = mysqli_query($conexion, "insert into comentarios values('0','1', 'remy', '$comentario_nuevo', '$num_com', '$btn')");  
+                          $res = mysqli_query($conexion, "insert into comentarios values('0','1', '$user', '$comentario_nuevo', '$num_com', '$btn')");  
                         mysqli_close($conexion);
                         header("Location: ../blog.php");
                     }
-                  
+                }else{
+
+                    header("Location: ../blog.php");
+                    
+                }
 ?>

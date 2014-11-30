@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2014-11-23 23:02:33
+Date: 2014-11-29 14:49:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `comentarios`;
 CREATE TABLE `comentarios` (
-  `id_comentario` int(11) NOT NULL,
+  `id_comentario` int(11) NOT NULL AUTO_INCREMENT,
   `id_juego` int(11) NOT NULL,
   `nick` varchar(50) NOT NULL,
   `comentario` varchar(150) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE `comentarios` (
   KEY `nick` (`nick`),
   CONSTRAINT `id_juego` FOREIGN KEY (`id_juego`) REFERENCES `juegos` (`id_juego`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `nick` FOREIGN KEY (`nick`) REFERENCES `usuarios` (`nick`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for comentario_juego
@@ -47,7 +47,7 @@ CREATE TABLE `comentario_juego` (
   KEY `nick1` (`nick`),
   CONSTRAINT `id_juego1` FOREIGN KEY (`id_juego`) REFERENCES `juegos` (`id_juego`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `nick1` FOREIGN KEY (`nick`) REFERENCES `usuarios` (`nick`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for juegos
@@ -63,6 +63,7 @@ CREATE TABLE `juegos` (
   `intrucciones` varchar(100) NOT NULL,
   `dir_juego` varchar(30) NOT NULL,
   `dir_imagen` varchar(50) NOT NULL,
+  `portada` varchar(60) NOT NULL,
   PRIMARY KEY (`id_juego`),
   KEY `tipo_de_usuario` (`tipo_de_usuario`),
   CONSTRAINT `tipo_de_usuario` FOREIGN KEY (`tipo_de_usuario`) REFERENCES `usuarios` (`tipo_de_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
