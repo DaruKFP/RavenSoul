@@ -18,7 +18,7 @@ body{
 .container {
     height: 571px;
     margin: 30px auto;
-    width: 957px;
+    width: 1107px;
 }
 #cajabarra{  
    width: 100%; 
@@ -45,7 +45,7 @@ header {
     height: 58px;
     padding: 0 0 0 9px;
     position: relative;
-    width: 585px;
+    width: 285px;
 }
 #nav ul {
     background-color: #222;

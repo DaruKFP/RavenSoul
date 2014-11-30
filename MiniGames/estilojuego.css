@@ -77,25 +77,28 @@ width: 100%;
     height: 20%;
 }
 h1{
-    color:blueviolet;
+    margin-left: 1%;
+    color: #666666;
     
 }
 .suge{
     margin: 1%;
-   height:7%;
-width: 18%; 
+   height:80%;
+width: 90%; 
 }
 #contenedor{
      width: 90%;
     height: 100%;
-    background-color: aliceblue;
+    background-color: white;
     margin-left: 5%;
 }
 h3{
+    margin-left: 4px;
     color: #0099ff;
 }
 h4{
-    color: magenta;
+    margin-left: 1%;
+    color: #3366ff;
 }
 .portadalogo{
     width: 30%;
@@ -103,7 +106,7 @@ h4{
     margin-left: 30%;
 }
 #caja2{
-    background-color: aliceblue;
+    background-color: white;
 height: 24%;
 width:70%;
 margin-left: 15%;
@@ -123,8 +126,9 @@ box-shadow:  0 0 22px #666666;
 }
 /*caja de texto*/
 #caja4{
+    border: 1px solid #666666;
     margin-top: 2%;
-    background-color: aliceblue;
+    background-color: white;
 height: 15%;
 width: 100%;
 float:left;
@@ -164,6 +168,7 @@ border-radius: 2%;
 box-shadow:  0 0 22px #666666;
 }
 .manitas{
+    margin-left: 4px;
  width: 2%;
     height: 10%;
     

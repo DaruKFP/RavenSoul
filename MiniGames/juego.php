@@ -3,7 +3,14 @@
 	<title>pagina juegos</title>
         <link rel="stylesheet" type="text/css" href="estilojuego.css">
 		<script src="carrucel2.js"></script>
+<<<<<<< HEAD
         
+=======
+                <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
+			<script src="jquery.js"></Script>
+		    <script type="text/javascript" src="slick.min.js"></script>
+			<link rel="stylesheet" type="text/css" href="slick.css"/>
+>>>>>>> origin/master
 </head>
 <body onload="inicio()">
 	<div id="caja">
@@ -23,8 +30,10 @@
             <section id="contenedor">
             <aside id="caja2">
                 <?php 
+			if(isset($_GET['nombre'])){
+			$nombre=$_GET['nombre'];
 			$conexion = mysqli_connect("localhost", "root", "", "minigames");
-			$res = mysqli_query($conexion, "select * from juegos where nombre='sweetland';");
+			$res = mysqli_query($conexion, "select * from juegos where nombre='$nombre';");
 			if($lector = mysqli_fetch_array($res)){
 			$id = $lector["id_juego"];
 			$descripcion = $lector["descripcion"];
@@ -33,20 +42,35 @@
 			$direccion = $lector["dir_juego"];
 			$direccion_imagen = $lector["dir_imagen"];
 			}
-			?>
-                    <img class="portadalogo" src="<?php echo($direccion_imagen) ?>;">
+			
+                 echo"   <img class='portadalogo' src='$direccion_imagen'>";
           
-                    <h1>Descripcion</h1>
-                    <h4> <?php echo($descripcion); ?></h4>
-                    <h1>Instrucciones</h1>
-                    <h4><?php echo($instrucciones); ?></h4>
-					
+                  echo"  <h1>Descripcion:</h1>";
+                  echo"  <h4>$descripcion</h4>";
+                  echo"  <h1>Instrucciones:</h1>";
+                  echo"  <h4>$instrucciones</h4>";
+					}
+			?>
             </aside>
-                <section id="sugerencias">
-                    <h1>Juegos que te pueden interesar</h1>
-                    <img id="imagen" class="suge" src="logos de video juegos/sweetland.png">
-					<img id="imagen2" class="suge" src="logos de video juegos/sweetland.png">
-                </section>
+                <div id="sugerencias" class="c">
+            <h1>Juegos que te pueden interesar</h1>
+			<?php
+			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$res = mysqli_query($conexion, "select dir_imagen,nombre from juegos;");
+			while($lector = mysqli_fetch_array($res)){
+			$portada = $lector["dir_imagen"];
+			$nombre =$lector["nombre"];
+            echo"<div style='width:200px; height:200px;><a href='juego.php?nombre=$nombre'><img id='imagen' class='suge' src='$portada'></a></div>";
+			}
+				?>
+                </div>
+<script>
+$('.c').slick({
+autoplay:true,
+autoplaySpeed: 1500
+});
+arrows: true;
+  </script>
 <aside id="caja3">
     
 <header id="cajatres2">

@@ -142,15 +142,31 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	position: absolute;
 	background-color: #FF0000;
 	opacity: 0.8;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 7px;
 	display: none;
 	top: 40%;
-	left: 35%;
+	left: 25%;
+	border-radius: 2%;
+	box-shadow: 0 0 20px red;
 }
-
+.botonerror{
+	color: white;
+	border-radius: 3%;
+	background-color: blue;
+	font-family: arial;
+	width: 100px;
+	height: 40px;
+}
+h1{
+	margin-left: 1%;
+}
+.errorbtn{
+	margin-top: 10%;
+	float: left;
+}
 #cubierta{
 	z-index: 4;
 	position: absolute;
