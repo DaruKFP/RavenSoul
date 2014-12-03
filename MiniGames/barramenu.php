@@ -56,7 +56,7 @@
                     <li><a href="acerca de.html">Acerca de</a></li>
                     <li><a href="acerca de.html">Administrador</a>
                        <ul class="subs">
-                           <li><a href="ModJuegos.html">Juegos</a></li>
+                           <li><a href="ModJuegos.php">Juegos</a></li>
                         <li><a href="#">Usuarios</a></li>
                        
                     </ul>
@@ -104,11 +104,15 @@
 
                 if($tipo == 1){
                     $ft = "background: url(usuarios/user1.gif) no-repeat;background-size: 100%;";
+					
                 }else{
                     $ft = "background: url(usuarios/iconuser2.png) no-repeat;background-size: 100%;";
                 }
                     echo ("<li id='login2'><section id='img_log' style='$ft'></section><section id='usua'>$usuario</section></li>");
+				?><li></section><section><button onclick="<?php session_destroy(); echo'location.reload();';?> ">cerrar</button></section></li>
+				<?php
             }
 ?>
+		
     </li>
 </section>
