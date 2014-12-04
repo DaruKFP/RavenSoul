@@ -63,7 +63,7 @@ arrows: true;
 			$portada = $lector["dir_imagen"];
 			$nombre = $lector["nombre"];
 			if($cont%2){ 
-			echo "<article id='art1'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li> </ul> </article>";
+			echo "<article id='art1'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li> </ul></article>";
          }else{
                 echo"</section>";
                 echo"<section id='der'>";
