@@ -10,43 +10,17 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+<link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="estiloabout.css">
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
         <body onload="Inicio()">
-            <div id="caja1">
-                <header>
-                    <a href="index.html">
-            <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
-         </a>
-        </header>
-                
-                 <aside id="cajabarra">
-
-                
-       <div class="container">
-
-            <ul id="nav">
-                <li><a href="#">Categorias</a></li>
-                <li><a class="hsubs" href="#">Catalogo</a>
-                 
-                </li>
-                <li><a class="hsubs" href="#">Blog</a>
-                    
-                </li>
-                <li><a class="hsubs" href="contacto.html">Contacto</a>
-                 
-                </li>
-                <li><a href="#">Radio</a></li>
-              
-                <li><a href="acerca de.html">Acerca de</a></li>
-                <div id="lavalamp"></div>
-            </ul>
-       </div>
-                      
-              
-            </aside>
+          <?php
+                include "barramenu.php";
+            ?>
+           
              <div id="Redesymas">
             </div>
                 <div id="acerca">

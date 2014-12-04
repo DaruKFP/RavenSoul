@@ -11,10 +11,17 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilos/estilo_cat.css">
         <link rel="stylesheet" href="estilos/estilo_accion.css">
+          <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="estilo.css">
+          <link rel="stylesheet" href="css/menu.css">
+
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
         <section id="t">
+        <?php
+                include "barramenu.php";
+            ?>
             <section id="tsup">
                 <header id="th">
                 </header>
