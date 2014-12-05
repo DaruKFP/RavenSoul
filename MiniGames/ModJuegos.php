@@ -27,7 +27,6 @@ and open the template in the editor.
 			<?php
             include "barramenu.php";
             ?>
-            
             <form id="Contenido" method="post" action="ModJuegos.php">
                 <label id="letras">Id del juego</label>
                 <button onclick="funcion()"  class="botoncini" value="1" name="btn">Buscar</button>
@@ -41,6 +40,9 @@ and open the template in the editor.
 				}
 				?>
                 </select>
+				</form>
+            <form method="post" action="php/funciones.php">
+				
                 <br>
                 <br>
                 <br>
@@ -119,10 +121,10 @@ and open the template in the editor.
                 <input type="text" id="dir" name="dirj" placeholder="Direccion del juego" value="<?php echo($dir_juego) ?>"/>
                 <br>
                 <br>
-                <form  enctype="multipart/form-data" action="ModJuegos.html" method="POST">
+                <!--<form  enctype="multipart/form-data" action="ModJuegos.html" method="POST">
                 <input class="cont"  name="uploadedfile" type="file" />
                 <input class="botoncini" type="submit" value="Subir archivo" />
-                </form>
+                </form>-->
                 <br>
                 <br>
                 <br>
@@ -131,15 +133,15 @@ and open the template in the editor.
                 <input type="text" id="dir" name="diri" placeholder="Direccion de la imagen" value="<?php echo($di_imagen) ?>"/>
                 <br>
                 <br>
-                <form  enctype="multipart/form-data" action="ModJuegos.html" method="POST">
+                <!--<form  enctype="multipart/form-data" action="ModJuegos.html" method="POST">
                 <input class="cont"  name="uploadedfile" type="file" />
                 <input class="botoncini" type="submit" value="Subir archivo" />
-                </form>
+                </form>-->
                 <br>
                 <br>
                 <br>
-				
-                <button onclick="funcion()" class="botoncini" name="btn1" value="2">Modificar</button>
+				<input name="pruebaID" value="<?php echo($id) ?>" style="display:none;">
+                <button type="submit" class="botoncini" name="opc" value="4">Modificar</button>
             </form>
         </div>
     </body>

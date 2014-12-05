@@ -8,6 +8,7 @@
 				/*header("Location: index.php");*/
 			break;
 			case 1:
+				//Iniciar  sesion
 				if(isset($_POST['nick']) && isset($_POST['contra'])){
 					//session_start();
 					$nick = $_POST['nick'];
@@ -33,13 +34,7 @@
 				}
 			break;
 			case 2:
-			
-			/*echo($_POST['nick']+"<br>");
-			echo($_POST['nombre']+"<br>");
-			echo($_POST['contra']+"<br>");
-			echo($_POST['email']+"<br>");
-			echo($_POST['fecha_nacimiento']+"<br>");
-			echo($_POST['descripcion']+"<br>");*/
+				//Agregar
 				if(isset($_POST['nick']) && isset($_POST['nombre']) && isset($_POST['contra']) && isset($_POST['email']) && isset($_POST['fecha_nacimiento']) && isset($_POST['descripcion'])){
 					$nick = $_POST['nick'];
 					$nombre= $_POST['nombre'];
@@ -79,6 +74,7 @@
 			break;
 			
 			case 3:
+			//Contacto
 			$nombre= $_POST['nombre'];
 			$email= $_POST['email'];
 			$tema= $_POST['tema'];
@@ -95,6 +91,12 @@
 			break;
 			default:
 			echo($opcion);
+			break;
+			case 4:
+				if(isset($_POST['pruebaID'])){
+					$id = $_POST['pruebaID'];
+					echo("Funciono, no estoy loco :D - $id");
+				}
 			break;
 		}
 	}else{

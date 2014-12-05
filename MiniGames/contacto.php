@@ -10,10 +10,6 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilocontac.css">
-             <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="estilo.css">
-          <link rel="stylesheet" href="css/menu.css">
-
 		<script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
@@ -28,11 +24,8 @@ and open the template in the editor.
                  <aside id="cajabarra">
                 
        <div class="container">
-       <?php
-                include "barramenu.php";
-            ?>
 
-           <!--  <ul id="nav">
+            <ul id="nav">
                 <li><a href="#">Categorias</a></li>
                 <li><a class="hsubs" href="#">Catalogo</a>
                  
@@ -47,7 +40,7 @@ and open the template in the editor.
               
                 <li><a href="acerca de.html">Acerca de</a></li>
                 <div id="lavalamp"></div>
-            </ul> -->
+            </ul>
        </div>
                       
               
