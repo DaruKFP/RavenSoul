@@ -93,9 +93,31 @@
 			echo($opcion);
 			break;
 			case 4:
-				if(isset($_POST['pruebaID'])){
+				if(isset($_POST['pruebaID']) && isset($_POST['nombre']) && isset($_POST['list']) && isset($_POST['descripcion']) && isset($_POST['puntuacion']) && isset($_POST['instrucciones']) && isset($_POST['dirj']) && isset($_POST['diri'])){
 					$id = $_POST['pruebaID'];
-					echo("Funciono, no estoy loco :D - $id");
+					$nom=$_POST['nombre'];
+					$tip=$_POST['list'];
+					$desc=$_POST['descripcion'];
+					$punt=$_POST['puntuacion'];
+					$inst=$_POST['instrucciones'];
+					$direcj=$_POST['dirj'];
+					$direci=$_POST['diri'];
+					$conexion = mysqli_connect("localhost", "root", "", "minigames");
+					$res = mysqli_query($conexion, "select * from juegos where id_juego='$id';");
+					if($lector = mysqli_fetch_array($res)){
+					/* mandar decir que el nick ya existe */
+					echo("<br><br>///////////////////////////////////////////////////////////////////////////////////////////////////////<br>Este ya existe xD <br>");
+					for($i=0;$i<9;$i++){
+						echo("$lector[$i] <br>");
+					}
+					echo("-----------------------------------------------------------------------------------------------------------------ya existe :/ <br>");
+					$res = mysqli_query($conexion, "update juegos set nombre='$nom', tipo='$tip', descripcion='$desc', puntuacion=$punt, instrucciones='$inst', dir_juego='$direcj', dir_imagen='$direci' where id_juego=$id;");
+					if(1 == $res){
+						echo("<script> alert('cambiado correctamente');</script>");
+					}else{
+						echo("$id <br> $nom <br> $tip <br> $desc <br> $punt <br> $inst <br> $direcj <br> $direci <br> -$res- <br> ");
+					}
+				}
 				}
 			break;
 		}
