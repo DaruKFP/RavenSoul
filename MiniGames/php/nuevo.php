@@ -1,28 +1,9 @@
 <?php
-echo"<form method='POST'>";
+echo"<form name='comentar1' id='comentar1' class='comentar1' method='POST' action='php/prueba.php'>";
     echo"<img class='manitas' src='../../minigames/botones/like.png' hspace='0'>";
     echo"<img class='manitas' src='../../minigames/botones/no like.png'>";
-    
-    echo"<h3>Comenta  <input type='text' id='tema' name='tema' placeholder='Tema' cols='40' rows='5' style='width:40%;height:20%;font-size:12px;font-family:Comic Sans MS;color: #484c4c;'>";
-    echo"<button type='submit' id='comenta' name='comenta'>Comentar</button>";
-    
-    echo"</h3>";
-echo"</form>";
-        function coment(){
-            if(session_start()){
-                $user = $_SESSION['inicio'];                   
-                //$user='remy';
-                $comentario= $_POST['tema'];
-                $conexion = mysqli_connect("localhost", "root", "", "minigames");
-                mysqli_query($conexion, "insert into comentario_juego values('0','1','$user','$comentario')");  
-                mysqli_close($conexion);
-                      
-            }else{
-                    
-            }
-        }
-        
-        if(isset($_POST['tema'])){
-            coment();
-        }
+    echo"<h3>Comenta</h3>";
+    echo "<input type='text' id='comentar' name='comentar' class='comentar' placeholder='Tema' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;color: #484c4c;'/>";
+    echo"<button type='submit' id='btncomentar' name='btncomentar' class='btncomentar'></button>";
+    echo "</form>";
 ?>

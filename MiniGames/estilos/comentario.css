@@ -1,0 +1,97 @@
+.imag{
+ width: 100%;
+ height: 100%;
+}
+.comentar{
+    margin-left: 2%;
+    float: left;
+    left: 0%;
+    width: 30%;
+    height: 10%;
+}
+.btncomentar{
+    //margin-top: 2%;
+    //margin-right: 30%;
+    margin-left: 50%;
+    float: left;
+    width: 20%;
+    height: 50%;
+    background: url(../botones/comentar.png)  no-repeat;
+    background-size: 100%;
+}
+#comentar1{
+// margin-top: -11%;
+    margin-top: 1.5%;
+    float: left;
+    width: 98%;
+    height: 30%;
+}
+#cuadrocom{
+    background-color: yellow;
+    width: 20%;
+    height: 50%;
+        
+}
+#persona{
+    //background-color: yellow;
+    width: 10%;
+    height: 100%;
+    //max-height: max-content;
+}
+#comentariopersona{
+    
+    color: #0033ff;
+    float: right;
+    width: 85%;
+    height: max-content;
+    border-radius: 10px;
+    background-color: #cccccc;
+}
+.nada{
+    margin-top: 10%;
+    //border: 1px solid red;
+    float: left;
+    width: 100%;
+    overflow: auto;
+    //height: 30%;
+    min-height: max-content;
+    padding: 0%;
+}
+#userpersona{
+    text-align: center;
+    border-radius: 5px;
+    background-color: #cccccc;
+    color: #0033ff;
+    width: 100%;
+    height: 45%;
+}
+#post{
+/*    box-shadow: 0 0 22px #9966ff;*/
+    background: url(../portada/fondocomentar.jpg);
+        background-size: 100%;
+    //border: 3px solid black;
+    padding: 0%;
+    //background-color: yellow;
+    margin-left: 4%;
+    margin: 0%;
+    width: 98%;
+    height: 30%;
+    max-height: max-content;
+    float: right;
+    overflow:auto;
+    margin-bottom: 2.5%;
+}
+.comentarios{
+    border-radius: 0% 0% 1% 1%;
+    background-color: #cccccc;
+     opacity: 1;
+    float:left;
+    width: 95%;
+    height: 25%;
+    //max-height:min-content;
+}
+.nuevo_comento{
+    float:left;
+    height: 50%;
+    width: 98%;
+}

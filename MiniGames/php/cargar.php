@@ -30,4 +30,10 @@ for ($i=3; $i <=count($comen_juego) ; $i+=4) {
     echo "</div>";
 }
 }
+session_name("id");
+session_start();
+if(isset($_SESSION['id'])){
+$id = $_SESSION['id'];
+return cargar($id);
+}
 ?>
