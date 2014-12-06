@@ -57,7 +57,7 @@
                     <li><a href="acerca de.html">Administrador</a>
                        <ul class="subs">
                            <li><a href="ModJuegos.php">Juegos</a></li>
-                        <li><a href="#">Usuarios</a></li>
+                           <li><a href="ModUsarios.html">Usuarios</a></li>
                        
                     </ul>
                     </li>
