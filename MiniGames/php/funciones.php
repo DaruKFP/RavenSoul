@@ -105,17 +105,19 @@
 					$conexion = mysqli_connect("localhost", "root", "", "minigames");
 					$res = mysqli_query($conexion, "select * from juegos where id_juego='$id';");
 					if($lector = mysqli_fetch_array($res)){
+					//echo($lector);
 					/* mandar decir que el nick ya existe */
 					echo("<br><br>///////////////////////////////////////////////////////////////////////////////////////////////////////<br>Este ya existe xD <br>");
 					for($i=0;$i<9;$i++){
 						echo("$lector[$i] <br>");
 					}
 					echo("-----------------------------------------------------------------------------------------------------------------ya existe :/ <br>");
-					$res = mysqli_query($conexion, "update juegos set nombre='$nom', tipo='$tip', descripcion='$desc', puntuacion=$punt, instrucciones='$inst', dir_juego='$direcj', dir_imagen='$direci' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set nombre='$nom', tipo='$tip', descripcion='$desc', puntuacion='$punt', instrucciones='$inst', dir_juego='$direcj', dir_imagen='$direci' where id_juego=$id;");
 					if(1 == $res){
 						echo("<script> alert('cambiado correctamente');</script>");
 					}else{
-						echo("$id <br> $nom <br> $tip <br> $desc <br> $punt <br> $inst <br> $direcj <br> $direci <br> -$res- <br> ");
+					echo"$res";
+					echo("$id <br> $nom <br> $tip <br> $desc <br> $punt <br> $inst <br> $direcj <br> $direci <br> -$res- <br> ");
 					}
 				}
 				}
