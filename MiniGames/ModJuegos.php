@@ -75,12 +75,15 @@
 				}
 			 }
 				 ?>
+                 <section id="form1">
                 <label id="letras">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Titulo del juego" value="<?php echo($nombre) ?>"/>
+                 </section>
                 <br>
                 <br>
                 <br>
                 <hr align=center size="2" width="600" color="#0099ff">
+                <section id="form2">       
                 <label id="letras">Tipo</label>
                 <input list="tipo" name="list" value="<?php echo($tipo)?>"/>
                 <datalist id="tipo">
@@ -90,30 +93,39 @@
                 <option label="Tipo" value="Pelea">   
                 <option label="Tipo" value="Simulacion">
                 </datalist>
+                </section>
                 <br>
                 <br>
                 <br>
                 <hr align=center size="2" width="600" color="#0099ff">
+                <section id="form3">
                 <label id="letras"> Descripcion </label>
 				<textarea id="descripcion"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="descripcion" style="resize:none;" rows="3" cols="50" placeholder="Descripcion del juego"><?php echo($descripcion)?></textarea>
+                </section>
                 <br>
                 <br>
                 <br>
                 <hr align=center size="2" width="600" color="#0099ff">
+                <section id="form4">
                 <label id="letras"> Puntuacion </label>
                 <input type="number" id="puntuacion" name="puntuacion" value="<?php echo($puntuacion)?>" placeholder="Puntuacion del juego"/>
+                </section>
                 <br>
                 <br>
                 <br>
                 <hr align=center size="2" width="600" color="#0099ff">
+                <section id="form5">
                 <label id="letras"> Instrucciones </label>
 				<textarea id="descripcion"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="instrucciones" style="resize:none;" rows="5" cols="60" placeholder="Instrucciones del video juego"><?php echo($instrucciones) ?></textarea>
+                </section>
                 <br>
                 <br>
                 <br>
                 <hr align=center size="2" width="600" color="#0099ff">
+                <section id="form6">
                 <label id="letras"> Direccion del juego </label>
                 <input type="text" id="dir" name="dirj" placeholder="Direccion del juego" value="<?php echo($dir_juego) ?>"/>
+                </section>
                 <br>
                 <br>
                 <!--<form  enctype="multipart/form-data" action="ModJuegos.html" method="POST">
