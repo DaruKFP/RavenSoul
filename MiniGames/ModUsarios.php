@@ -57,7 +57,7 @@ and open the template in the editor.
 				}
 				?>
                 </select>
-               <button id="bot" type="submit" name="btn" value="1">Buscar</button>
+               
                <br>
                <br>
                <HR ALIGN=center size="2" width="600" color="#0099cc">
@@ -68,6 +68,8 @@ and open the template in the editor.
                         <option value="Administrador">Administrador</option>
                         <option value="Usuario">Usuario</option>
                 </Select>
+                  <input id="botn" type="submit" value="Modificar" />
+               
                  <HR ALIGN=center size="2" width="600" color="#0099cc">
                  <br>
                  <br>
@@ -83,7 +85,6 @@ and open the template in the editor.
                  <HR ALIGN=center size="2" width="600" color="#0099cc">
                  
                  <br>
-                <input id="botn" type="submit" value="Modificar" />
                
            </div>
        </div>
