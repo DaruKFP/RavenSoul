@@ -63,12 +63,13 @@ and open the template in the editor.
                <HR ALIGN=center size="2" width="600" color="#0099cc">
                 <br>
                 <br>
+				
                  <label class="letra" for="nam">Rango</label>
-                <select name="Rango">
-                        <option value="Administrador">Administrador</option>
-                        <option value="Usuario">Usuario</option>
+                <select name="Rango" id="Rango">
+                <option value="Admin">Administrador</option>
+                <option value="reg">Usuario</option>
                 </Select>
-                  <input id="botn" type="submit" value="Modificar" />
+                <button id="botn" type="submit" name="opc" value="6"> Modificar </button>
                
                  <HR ALIGN=center size="2" width="600" color="#0099cc">
                  <br>

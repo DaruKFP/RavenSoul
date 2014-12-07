@@ -112,7 +112,13 @@
 						echo("$lector[$i] <br>");
 					}
 					echo("-----------------------------------------------------------------------------------------------------------------ya existe :/ <br>");
-					$res = mysqli_query($conexion, "update juegos set nombre='$nom', tipo='$tip', descripcion='$desc', puntuacion='$punt', instrucciones='$inst', dir_juego='$direcj', dir_imagen='$direci' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set nombre='$nom' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set tipo='$tip' id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set descripcion='$desc' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set puntuacion='$punt' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set instrucciones='$inst' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set dir_juego='$direcj' where id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set dir_imagen='$direci' where id_juego=$id;");
 					if(1 == $res){
 						echo("<script> alert('cambiado correctamente');</script>");
 					}else{
@@ -123,7 +129,6 @@
 				}
 			break;
 			case 5:
-			echo("entro al 5");
 			if(isset($_POST['nick'])){
 			$nick = $_POST['nick'];
 			$conexion = mysqli_connect("localhost", "root", "", "minigames");
@@ -132,9 +137,24 @@
 			if(1 == $res){
 			echo("<script> alert('eliminado correctamente');</script>");
 			header("Location: ../ModUsarios.php");
+			}
+			}
+			break;
+			case 6:
+			echo"entro en 6";
+			$rango = $_POST['Rango'];
+			$nick = $_POST['nick'];
+			echo"$rango";
+			echo"$nick";
+			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$res = mysqli_query($conexion, "update usuarios set tipo_de_usuario ='$rango' where nick='$nick';");
+			echo"$res";
+			if(1 == $res){
+			echo("<script> alert('Se modifico el usuario');</script>");
+			header("Location: ../ModUsarios.php");
+
+			}
 			
-			}
-			}
 			break;
 		}
 	}else{
