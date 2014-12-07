@@ -122,6 +122,20 @@
 				}
 				}
 			break;
+			case 5:
+			echo("entro al 5");
+			if(isset($_POST['nick'])){
+			$nick = $_POST['nick'];
+			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$res = mysqli_query($conexion, "delete from usuarios where nick='$nick';");
+			echo"$res";
+			if(1 == $res){
+			echo("<script> alert('eliminado correctamente');</script>");
+			header("Location: ../ModUsarios.php");
+			
+			}
+			}
+			break;
 		}
 	}else{
 		echo("No hay nada");

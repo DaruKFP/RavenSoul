@@ -41,15 +41,23 @@ and open the template in the editor.
                 <div id="lavalamp"></div>
             </ul>
        </div>
-                      
-                    
-                
+                                      
             </aside>
            <div id="presentacion">
                <br>
-               <label class="letra" for="nam">Nick:</label>
-               <input type="text" id="name" name="name" value="" placeholder="Nick usuario" required="required" autofocus="autofocus" />  
-               <input id="bot" type="submit" value="Buscar" />
+			    <form Method="post" action="php/funciones.php"> 
+                <label class="letra" for="nam">Nick:</label>
+				<select id="nick" name="nick">
+				<?php 
+				$conexion = mysqli_connect("localhost", "root", "", "minigames");
+				$res = mysqli_query($conexion, "select nick from usuarios;");
+				while($lector = mysqli_fetch_array($res)){
+				$id = $lector["nick"];
+				echo"<option value='$id'>$id</option>";
+				}
+				?>
+                </select>
+               <button id="bot" type="submit" name="btn" value="1">Buscar</button>
                <br>
                <br>
                <HR ALIGN=center size="2" width="600" color="#0099cc">
@@ -63,8 +71,11 @@ and open the template in the editor.
                  <HR ALIGN=center size="2" width="600" color="#0099cc">
                  <br>
                  <br>
+				 
                   <label class="letra" for="nam">Eliminar</label>
-                  <input id="botn" type="submit" value="Eliminar" />
+				  <label class="letra" for="nam"><?php echo($id) ?></label>
+                  <button id="botn" type="submit" name="opc" value="5">Eliminar</button>
+				  </form>
                   <br>
                   <br>
                   <br>
