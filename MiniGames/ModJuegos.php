@@ -22,6 +22,7 @@
 			<?php
             include "barramenu.php";
             ?>
+            <div id="Contenido2">
             <form id="Contenido" method="post" action="ModJuegos.php">
                 <label id="letras">Id del juego</label>
                 <button onclick="funcion()"  class="botoncini" value="1" name="btn">Buscar</button>
@@ -150,6 +151,7 @@
 				<input name="pruebaID" value="<?php echo($id) ?>" style="display:none;">
                 <button type="submit" class="botoncini" name="opc" value="4">Modificar</button>
             </form>
+            </div>
         </div>
     </body>
 </html> 
