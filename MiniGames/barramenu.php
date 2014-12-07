@@ -57,7 +57,15 @@
                     <li><a href="acerca de.html">Administrador</a>
                        <ul class="subs">
                            <li><a href="ModJuegos.php">Juegos</a></li>
+                           <ul class="subs">
+                                <li><a href="#">Modificar juegos</a></li>
+                                <li><a href="NuevoJuego.php">Nuevo juegos</a></li>
+                           </ul>
                            <li><a href="ModUsarios.html">Usuarios</a></li>
+                            <ul class="subs">
+                                <li><a href="#">Modificar usuarios</a></li>
+                                 <li><a href="#">Nuevo usuarios</a></li>
+                           </ul>
                        
                     </ul>
                     </li>
