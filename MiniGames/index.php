@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/estiloredes.css">
         <script src="funciones.js"></script>
         <script src="/presentacion.js"></script>
-			<script src="jquery.js"></Script>
+			<script src="jquery.js"></script>
 		    <script type="text/javascript" src="slick.min.js"></script>
 				<link rel="stylesheet" type="text/css" href="slick.css"/>
 				

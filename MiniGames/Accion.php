@@ -19,31 +19,32 @@ and open the template in the editor.
     </head>
     <body>
         <section id="t">
-        <?php
-                include "barramenu.php";
-            ?>
+        <section class="bar">
+                <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                <?php
+                    include "barramenu.php";
+                ?>
+        </section>
             <section id="tsup">
-                <header id="th">
-                </header>
                 <section id="bus">
                         <input id="txtbus" type="text">
                     <figure id="busico">
-                        <img src="icono_buscar.jpg" height="100%">
+                        <img src="botones/google-web-search-256.png" height="100%">
                     </figure>
                 </section>
                 <section id="cat">
-                <nav id="nav">
-                    <li><a href="#">Lista de categorias</a>
-                        <ul>
-                            <li><a href="#">Accion</a></li>
-                            <li><a href="#">Estrategia</a></li>
-                            <li><a href="#">....</a></li>
-                            <li><a href="#">....</a></li>
-                            <li><a href="#">....</a></li>
-                        </ul>
-                    </li>
-                </nav>
-            </section>
+                    <nav class="nav">
+                        <li><a href="#">Lista de categorias</a>
+                            <ul>
+                                <li><a href="#">Accion</a></li>
+                                <li><a href="#">Aventura</a></li>
+                                <li><a href="#">Destreza</a></li>
+                                <li><a href="#">Pelea</a></li>
+                                <li><a href="#">Simulacion</a></li>
+                            </ul>
+                        </li>
+                    </nav>
+                </section>
         </section>
         <section id="cp">
                 <h2>Juegos en Accion</h2>

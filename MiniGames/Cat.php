@@ -19,13 +19,13 @@ and open the template in the editor.
     </head>
     <body>
         <section id="t">
-        <?php
-                include "barramenu.php";
-            ?>
+            <section class="bar">
+                <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                <?php
+                    include "barramenu.php";
+                ?>
+        </section>
             <section id="tsup">
-                <header id="th">
-                    <a href="index.php"> <article><img src="css/minigames2.png"></article></a>
-                </header>
                 <section id="bus">
                         <input id="txtbus" type="text">
                     <figure id="busico">
@@ -33,7 +33,7 @@ and open the template in the editor.
                     </figure>
                 </section>
                 <section id="cat">
-                    <nav id="nav">
+                    <nav class="nav">
                         <li><a href="#">Lista de categorias</a>
                             <ul>
                                 <li><a href="#">Accion</a></li>
