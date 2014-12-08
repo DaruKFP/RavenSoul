@@ -48,6 +48,7 @@
 $('.c').slick({
 autoplay:true,
 autoplaySpeed: 1500
+});
 arrows: true;
   </script>
   

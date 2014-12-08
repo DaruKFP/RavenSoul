@@ -43,26 +43,26 @@
                       
               
             </aside>
+			<form action="php/funciones.php" method="post">
          <div id="presentacion">
               <label>Id juego </label>
-                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="nick" placeholder="Id del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
+              <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="id" placeholder="Id del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
              <br>
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d"> 
               <label>Nombre del juego</label>
-                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="nick" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
+                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="nombre" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
              <br>
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d"> 
                <label>Genero del juego</label>
              <P ALIGN=center>
 							<select name="Genero">
-								<option value="M">Accion</option>
-								<option value="F">Aventura</option>
-                                                                <option value="F">Accion</option>
-                                                                <option value="F">Destreza</option>
-                                                                <option value="F">Pelea</option>
-                                                                <option value="F">Simulacion</option>
+								<option value="accion">Accion</option>
+								<option value="aventura">Aventura</option>
+                                <option value="destreza">Destreza</option>
+                                <option value="pelea">Pelea</option>
+                                <option value="simulacion">Simulacion</option>
 							</Select>
 						 </P> 
              <br>
@@ -74,12 +74,12 @@
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">  
               <label> Instrucciones </label>
-		<textarea id="descripcion"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="descripcion" style="resize:none;" rows="3" cols="30" placeholder="escribe tu descripcion"></textarea>
+			<textarea id="instrucciones"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="instrucciones" style="resize:none;" rows="3" cols="30" placeholder="escribe tu descripcion"></textarea>
              <br>
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">     
-              <label>Direccion del juego</label>
-                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="nick" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
+              <label>Direccion de la portada</label>
+                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="dirp" placeholder="Direccion de la portada" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
             <br>
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">  
@@ -121,8 +121,8 @@
          <br>
          <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">  
-                   <label>Direccion del juego</label>
-                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="nick" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
+             <label>Direccion del juego</label>
+             <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="" name="dirj" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
           
               <br>
              <br>
@@ -134,13 +134,14 @@
     </form>
                <br>
          <br>
-              <HR ALIGN=center size="2" width="600" color="#6f9c9d">  
-                   <label>Direccion de la imagen</label>
-                   <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="nick" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
-                     <br>
-                     <br>
-                   <button type="submit" class="boto" name="opc" value="4">Guardar</button>
+         <HR ALIGN=center size="2" width="600" color="#6f9c9d">  
+         <label>Direccion de la imagen</label>
+         <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="diri" placeholder="Nombre del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
+         <br>
+         <br>
+         <button type="submit" class="boto" name="opc" value="7">Guardar</button>
          </div>
+		 </form>
         
     </div>
 </body>

@@ -152,9 +152,30 @@
 			if(1 == $res){
 			echo("<script> alert('Se modifico el usuario');</script>");
 			header("Location: ../ModUsarios.php");
-
 			}
-			
+			break;
+			case 7:
+		    if(isset($_POST['id']) && isset($_POST['nombre']) && isset($_POST['Genero']) && isset($_POST['descripcion']) && isset($_POST['instrucciones']) && isset($_POST['dirp']) && isset($_POST['diri'])){
+			$id=$_POST['id'];
+			$nom=$_POST['nombre'];
+			$genero=$_POST['Genero'];
+			$desc=$_POST['descripcion'];
+			$inst=$_POST['instrucciones'];
+			$porta=$_POST['dirp'];
+			$dirj=$_POST['dirj'];
+			$diri=$_POST['diri'];
+			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+		    $res = mysqli_query($conexion, "insert into juegos values($id,'reg','$nom','$genero','$desc',0,'$inst','$dirj','$diri','$porta');");
+			//$res = mysqli_query($conexion,"insert into juegos values(5,'reg','ddd','aaaa','dddd',0,'aaaaa','j','dddi','ddddd');");	
+			if(1== $res){
+			header("Location: ../nuevoJuego.php");
+			echo("<script> alert('Se guardaron los datos del juego');</script>");
+			}else{
+			echo"no se guardo";
+			echo"$res";
+			}
+			}
+
 			break;
 		}
 	}else{

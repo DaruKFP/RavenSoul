@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="estilos/comentario.css">
 		<script src="carrucel2.js"></script>
                 <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
-			<script src="jquery.js"></Script>
+			<script src="jquery.js"></script>
 		    <script type="text/javascript" src="slick.min.js"></script>
 			<link rel="stylesheet" type="text/css" href="slick.css"/>
             <script type="text/javascript">
@@ -111,7 +111,7 @@ $(document).ready(function() {
 					}
 			?>
             </aside>
-                <div id="sugerencias" class="c">
+             <div id="sugerencias" class="c">
             <h1>Juegos que te pueden interesar</h1>
 			<?php
 			$conexion = mysqli_connect("localhost", "root", "", "minigames");
@@ -119,17 +119,17 @@ $(document).ready(function() {
 			while($lector = mysqli_fetch_array($res)){
 			$portada = $lector["dir_imagen"];
 			$nombre =$lector["nombre"];
-            echo"<div style='width:200px; height:200px;><a href='juego.php?nombre=$nombre'><img id='imagen' class='suge' src='$portada'></a></div>";
+            echo"<div style='width:200px; height:200px;><a href='juego.php?nombre=$nombre'><img id='' class='suge' src='$portada'></a></div>";
 			}
-				?>
-                </div>
+			?>
+            </div>
 <script>
 $('.c').slick({
 autoplay:true,
 autoplaySpeed: 1500
 });
 arrows: true;
-  </script>
+ </script>
 <aside id="caja3">
     
 <header id="cajatres2">
