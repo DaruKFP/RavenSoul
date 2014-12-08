@@ -1,7 +1,7 @@
 <script language="javascript" type="text/javascript">
   var RequestObject = false;
   var Archivo = 'php/cargar.php';
-  window.setInterval("actualizacion_reloj()", 180000);
+  window.setInterval("actualizacion_reloj()", 2000);
 
   if (window.XMLHttpRequest) RequestObject = new XMLHttpRequest();
   if (window.ActiveXObject) RequestObject = new ActiveXObject("Microsoft.XMLHTTP");
