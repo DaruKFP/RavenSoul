@@ -177,6 +177,12 @@
 			}
 
 			break;
+			echo($opcion);
+			case 8:
+			echo"entro";
+			session_destroy();
+			header("Location: ../index.php");
+			break;
 		}
 	}else{
 		echo("No hay nada");

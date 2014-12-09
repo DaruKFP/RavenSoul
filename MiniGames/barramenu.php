@@ -109,7 +109,7 @@
                     $ft = "background: url(usuarios/iconuser2.png) no-repeat;background-size: 100%;";
                 }
                     echo ("<li id='login2'><section id='img_log' style='$ft'></section><section id='usua'>$usuario</section></li>");
-				?><li></section><section><button onclick="<?php session_destroy(); echo'location.reload();';?> ">cerrar</button></section></li>
+				?><li><section><form action="php/funciones.php" method="post"><button type="submit" name="opc" value="8">cerrar</button></form></section></li>
 				<?php
             }
 ?>

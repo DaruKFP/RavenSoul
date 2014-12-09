@@ -38,8 +38,6 @@
     $_SESSION['id'] = 0;
 ?>
 
-
-<script src="jquery-1.3.min.js" language="javascript"></script>
 <script language="javascript">
 $(document).ready(function() {
     $().ajaxStart(function() {
