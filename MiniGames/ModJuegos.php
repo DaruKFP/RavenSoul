@@ -87,13 +87,13 @@
                 <section id="form2">       
                 <label id="letras">Tipo</label>
                 <input list="tipo" name="list" value="<?php echo($tipo)?>"/>
-                <datalist id="tipo">
-                <option label="Tipo" value="Accion">
-                <option label="Tipo" value="Aventura">
-                <option label="Tipo" value="Destreza">
-                <option label="Tipo" value="Pelea">   
-                <option label="Tipo" value="Simulacion">
-                </datalist>
+                <select id="tipo" name="tipo">
+                <option value="Accion">accion</option>
+                <option value="Aventura">aventura</option>
+                <option value="Destreza">destreza</option>
+                <option value="Pelea">pelea</option>
+                <option value="Simulacion">simulacion</option>
+                </select>
                 </section>
                 <br>
                 <br>
