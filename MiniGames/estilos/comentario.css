@@ -53,8 +53,8 @@
     float: left;
     width: 100%;
     overflow: auto;
-    //height: 30%;
-    min-height: max-content;
+    height: 30%;
+    //min-height: max-content;
     padding: 0%;
 }
 #userpersona{
@@ -76,7 +76,7 @@
     margin: 0%;
     width: 98%;
     height: 30%;
-    max-height: max-content;
+    
     float: right;
     overflow:auto;
     margin-bottom: 2.5%;
