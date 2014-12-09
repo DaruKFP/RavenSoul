@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Catalogo</title>
@@ -46,6 +41,25 @@ and open the template in the editor.
                     </nav>
                 </section>
             </section>
+            <?php
+                if(isset($_GET['pos']) || isset($_GET['neg'])){
+                    echo("Entro");
+                    if(isset($_GET['pos'])){
+                        $lik = $_GET['pos'];
+                        $puntuacion = 1;
+                    }else{
+                        $lik = $_GET['neg'];
+                        $puntuacion = -1;
+                    }
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select puntuacion from juegos where id_juego='$lik';");
+                    if($lector = mysqli_fetch_array($res)){
+                        $puntuacion += $lector["puntuacion"];
+                        $res = mysqli_query($conexion, "update juegos set puntuacion='$puntuacion' where id_juego=$lik;");
+                        header("Location: Cat.php");
+                    }
+                }
+            ?>
             <section id="nuevos">
                 <section class="titc">
                     <object class="swf_cat" type="application/x-shockwave-flash" data="flash/juegos nuevos.swf">
@@ -54,131 +68,37 @@ and open the template in the editor.
                             <param name="scale" value="exactfit">
                         </object>
                 </section>
+                <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select * from juegos where tipo='Nuevo';");
+                    while($lector = mysqli_fetch_array($res)){
+                        $imagen = $lector["dir_imagen"];
+                        $nombre =$lector["nombre"];
+                        $puntuacion = $lector["puntuacion"];
+                        $mand = $lector["id_juego"];
+                ?>
                 <article id="n1">
-                    <figure class="db"><img class="dbi" src="10684233_292673977594746_227506832_n.jpg">
+                    <figure class="db"><img class="dbi" src="<?php echo($imagen) ?>">
                         <section class="punt">
-                            <a href="">
+                            <a href="Cat.php?pos=<?php echo ($mand); ?>">
                                 <img class="like" src="botones/like.png">
                             </a>
-                                <section class="val_punt"></section>
-                            <a href="">
+                                <section class="val_punt"><?php echo ($puntuacion); ?></section>
+                            <a href="Cat.php?neg=<?php echo ($mand); ?>">
                                 <img class="no_like" src="botones/no like.png">
                             </a>
                         </section>
                         <section class="jugar">
-                            <a href="">
+                            <a href="<?php echo ("juego.php?nombre=$nombre");?>">
                                 <img class="jugar_btn" src="botones/jugar.png" alt="Img 01" >
                             </a>
                         </section>
                     </figure>
                 </article>
-                <article id="n2">
-                    <figure class="db"><img class="dbi" src="NARUTO-SHIPPUDEN-naruto-shippuuden-34052270-720-512.jpg">
-                    </figure>
-                </article>
-                <article id="n3">
-                    <figure  class="db"><img class="dbi" src="Zoro-icon.png">
-                    </figure>
-                </article>
-                <article id="n4">
-                    <figure  class="db"><img class="dbi" src="10684233_292673977594746_227506832_n.jpg"><figcaption>Descripcion...</figcaption></figure>
-                </article>
-                <article id="n5">
-                    <figure class="db"><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"><figcaption>Descripcion...</figcaption></figure>
-                </article>
-                <article id="n6">
-                    <figure class="db"><img class="dbi"><figcaption>Descripcion...</figcaption></figure>
-                </article>
-                <article id="n7">
-                    <figure class="db"><img class="dbi" src="NARUTO-SHIPPUDEN-naruto-shippuuden-34052270-720-512.jpg">
-                        <section class="punt">
-                            <img class="like" src="botones/like.png">
-                                <section class="val_punt"></section>
-                            <img class="no_like" src="botones/no like.png">
-                        </section>
-                        <section class="jugar">
-                            <img class="jugar_btn" src="botones/jugar.png" alt="Img 01" >
-                        </section>
-                    </figure>
-                </article>
-                <article id="n8">
-                    <figure class="db"><img class="dbi" src="10684233_292673977594746_227506832_n.jpg"><figcaption>Descripcion...</figcaption></figure>
-                </article>
-                <article id="n9">
-                    <figure class="db"><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"><figcaption>Descripcion...</figcaption></figure>
-                </article>
-                <article id="n10">
-                    <figure class="db"><img class="dbi" src="Zoro-icon.png"><figcaption>Descripcion...</figcaption></figure>
-                </article>
-                <article id="n11">
-                    <figure class="db"><img class="dbi" src="Zoro-icon.png">
-                        <section class="punt">
-                            <img class="like" src="botones/like.png">
-                                <section class="val_punt"></section>
-                            <img class="no_like" src="botones/no like.png">
-                        </section>
-                        <section class="jugar">
-                            <img class="jugar_btn" src="botones/jugar.png" alt="Img 01" >
-                        </section>
-                    </figure>
-                </article>
+                <?php
+                    }
+                ?>
             </section>
-    <!--    <section id="jmmo">
-                <h2>Con mejor calificacion</h2>
-                <section id="n">
-                    <figure class="p"><img class="dbi" src="Zoro-icon.png">
-                        <section class="punt">
-                            <img class="like" src="botones/like.png">
-                                <section class="val_punt"></section>
-                            <img class="no_like" src="botones/no like.png">
-                        </section>
-                        <section class="jugar">
-                            <img class="jugar_btn" src="botones/jugar.png" alt="Img 01" >
-                        </section>
-                    </figure>
-                </section>
-                <section id="jmmo2">
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png">
-                            <section class="punt">
-                                <img class="like" src="botones/like.png">
-                            <section class="val_punt"></section>
-                            <img class="no_like" src="botones/no like.png">
-                        </section>
-                        <section class="jugar">
-                            <img class="jugar_btn" src="botones/jugar.png" alt="Img 01" >
-                        </section>
-                        </figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="Zoro-icon.png"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="NARUTO-SHIPPUDEN-naruto-shippuuden-34052270-720-512.jpg"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="Zoro-icon.png"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="10684233_292673977594746_227506832_n.jpg"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="Zoro-icon.png"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="NARUTO-SHIPPUDEN-naruto-shippuuden-34052270-720-512.jpg"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                    <article class="mmo">
-                        <figure class="db"><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"><figcaption>Descripcion...</figcaption></figure>
-                    </article>
-                </section>
-            </section>  -->
         <section id="d">
                 <aside class="col">
                     <section class="tit">
@@ -188,50 +108,41 @@ and open the template in the editor.
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
-                    <section class="cont">
+                    <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select * from juegos where tipo='Accion';");
+                    while($lector = mysqli_fetch_array($res)){
+                        $imagen = $lector["dir_imagen"];
+                        $nombre =$lector["nombre"];
+                        $puntuacion = $lector["puntuacion"];
+                        $mand = $lector["id_juego"];
+                ?>
+                <section class="cont">
                         <article class="elcol">
-                            <figure><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png">
-                            </figure>
+                            <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
                             <section class="sub_col">
                                 <section class="punt">
-                                    <a href="">
+                                    <a href="Cat.php?pos=<?php echo ($mand); ?>">
                                         <img class="like" src="botones/like.png">
                                     </a>
-                                <section class="val_punt"></section>
-                                    <a href="">
+                                <section class="val_punt"><?php echo ($puntuacion); ?></section>
+                                    <a href="Cat.php?neg=<?php echo ($mand); ?>">
                                         <img class="no_like" src="botones/no like.png">
                                     </a>
                                 </section>
                                 <section class="jugar">
-                                    <a href="">
+                                    <a href="<?php echo ("juego.php?nombre=$nombre");?>">
                                         <img class="jugar_btn" src="botones/jugar.png" 
                                         alt="Img 01" >
                                     </a>
                                 </section>
                             </section>
                         </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src="One-Piece-Logo-Wallpapers-HD.png"></figure>
-                            <a>Jugar</a>
-                        </article>
-                    </section>
-                </aside>
+                </section>
+                <?php
+                    }
+                ?>
+            </aside>
             <aside class="col">
                     <section class="tit">
                         <object class="swf_cat" type="application/x-shockwave-flash" data="flash/juegos aventura.swf">
@@ -240,32 +151,40 @@ and open the template in the editor.
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
-                    <section class="cont">
+                    <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select * from juegos where tipo='Aventura';");
+                    while($lector = mysqli_fetch_array($res)){
+                        $imagen = $lector["dir_imagen"];
+                        $nombre =$lector["nombre"];
+                        $puntuacion = $lector["puntuacion"];
+                        $mand = $lector["id_juego"];
+                ?>
+                <section class="cont">
                         <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
+                            <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
+                            <section class="sub_col">
+                                <section class="punt">
+                                    <a href="Cat.php?pos=<?php echo ($mand); ?>">
+                                        <img class="like" src="botones/like.png">
+                                    </a>
+                                <section class="val_punt"><?php echo ($puntuacion); ?></section>
+                                    <a href="Cat.php?neg=<?php echo ($mand); ?>">
+                                        <img class="no_like" src="botones/no like.png">
+                                    </a>
+                                </section>
+                                <section class="jugar">
+                                    <a href="<?php echo ("juego.php?nombre=$nombre");?>">
+                                        <img class="jugar_btn" src="botones/jugar.png" 
+                                        alt="Img 01" >
+                                    </a>
+                                </section>
+                            </section>
                         </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                    </section>
+                </section>
+                <?php
+                    }
+                ?>
                 </aside>
             <aside class="col">
                     <section class="tit">
@@ -275,32 +194,40 @@ and open the template in the editor.
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
-                    <section class="cont">
+                    <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select * from juegos where tipo='Destreza';");
+                    while($lector = mysqli_fetch_array($res)){
+                        $imagen = $lector["dir_imagen"];
+                        $nombre =$lector["nombre"];
+                        $puntuacion = $lector["puntuacion"];
+                        $mand = $lector["id_juego"];
+                ?>
+                <section class="cont">
                         <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
+                            <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
+                            <section class="sub_col">
+                                <section class="punt">
+                                    <a href="Cat.php?pos=<?php echo ($mand); ?>">
+                                        <img class="like" src="botones/like.png">
+                                    </a>
+                                <section class="val_punt"><?php echo ($puntuacion); ?></section>
+                                    <a href="Cat.php?neg=<?php echo ($mand); ?>">
+                                        <img class="no_like" src="botones/no like.png">
+                                    </a>
+                                </section>
+                                <section class="jugar">
+                                    <a href="<?php echo ("juego.php?nombre=$nombre");?>">
+                                        <img class="jugar_btn" src="botones/jugar.png" 
+                                        alt="Img 01" >
+                                    </a>
+                                </section>
+                            </section>
                         </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                    </section>
+                </section>
+                <?php
+                    }
+                ?>
                 </aside>
             <aside class="col">
                     <section class="tit">
@@ -310,32 +237,40 @@ and open the template in the editor.
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
-                    <section class="cont">
+                    <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select * from juegos where tipo='Pelea';");
+                    while($lector = mysqli_fetch_array($res)){
+                        $imagen = $lector["dir_imagen"];
+                        $nombre =$lector["nombre"];
+                        $puntuacion = $lector["puntuacion"];
+                        $mand = $lector["id_juego"];
+                ?>
+                <section class="cont">
                         <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
+                            <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
+                            <section class="sub_col">
+                                <section class="punt">
+                                    <a href="Cat.php?pos=<?php echo ($mand); ?>">
+                                        <img class="like" src="botones/like.png">
+                                    </a>
+                                <section class="val_punt"><?php echo ($puntuacion); ?></section>
+                                    <a href="Cat.php?neg=<?php echo ($mand); ?>">
+                                        <img class="no_like" src="botones/no like.png">
+                                    </a>
+                                </section>
+                                <section class="jugar">
+                                    <a href="<?php echo ("juego.php?nombre=$nombre");?>">
+                                        <img class="jugar_btn" src="botones/jugar.png" 
+                                        alt="Img 01" >
+                                    </a>
+                                </section>
+                            </section>
                         </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                    </section>
+                </section>
+                <?php
+                    }
+                ?>
                 </aside>
             <aside class="col">
                     <section class="tit">
@@ -345,32 +280,40 @@ and open the template in the editor.
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
-                    <section class="cont">
+                    <?php
+                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $res = mysqli_query($conexion, "select * from juegos where tipo='Simulacion';");
+                    while($lector = mysqli_fetch_array($res)){
+                        $imagen = $lector["dir_imagen"];
+                        $nombre =$lector["nombre"];
+                        $puntuacion = $lector["puntuacion"];
+                        $mand = $lector["id_juego"];
+                ?>
+                <section class="cont">
                         <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
+                            <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
+                            <section class="sub_col">
+                                <section class="punt">
+                                    <a href="Cat.php?pos=<?php echo ($mand); ?>">
+                                        <img class="like" src="botones/like.png">
+                                    </a>
+                                <section class="val_punt"><?php echo ($puntuacion); ?></section>
+                                    <a href="Cat.php?neg=<?php echo ($mand); ?>">
+                                        <img class="no_like" src="botones/no like.png">
+                                    </a>
+                                </section>
+                                <section class="jugar">
+                                    <a href="<?php echo ("juego.php?nombre=$nombre");?>">
+                                        <img class="jugar_btn" src="botones/jugar.png" 
+                                        alt="Img 01" >
+                                    </a>
+                                </section>
+                            </section>
                         </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                        <article class="elcol">
-                            <figure><img class="dbi" src=""></figure>
-                            <a>Jugar</a>
-                        </article>
-                    </section>
+                </section>
+                <?php
+                    }
+                ?>
                 </aside>
         </section>
         <footer id="terminos">

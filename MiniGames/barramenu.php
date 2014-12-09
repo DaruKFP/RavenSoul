@@ -32,7 +32,7 @@
         <div class="container">
             <ul id="nav">
                 <li><a href="juego.php">Categorias</a></li>
-                <li><a class="hsubs" href="#">Catalogo</a></li>
+                <li><a class="hsubs" href="Cat.php">Catalogo</a></li>
                 <li><a class="hsubs" href="#">Comentarios</a></li>
                 <li><a class="hsubs" href="contacto.php">Contacto</a></li>
                 <li><a href="#">Radio</a></li>
@@ -49,7 +49,7 @@
 
                 <ul id="nav2">
                     <li><a href="#">Categorias</a></li>
-                    <li><a class="hsubs" href="#">Catalogo</a></li>
+                    <li><a class="hsubs" href="Cat.php">Catalogo</a></li>
                     <li><a class="hsubs" href="#">Comentarios</a></li>
                     <li><a class="hsubs" href="contacto.html">Contacto</a></li>
                     <li><a href="#">Radio</a></li>
