@@ -108,6 +108,7 @@
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
+                <section class="cont">
                     <?php
                     $conexion = mysqli_connect("localhost", "root", "", "minigames");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Accion';");
@@ -117,7 +118,6 @@
                         $puntuacion = $lector["puntuacion"];
                         $mand = $lector["id_juego"];
                 ?>
-                <section class="cont">
                         <article class="elcol">
                             <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
                             <section class="sub_col">
@@ -138,10 +138,10 @@
                                 </section>
                             </section>
                         </article>
-                </section>
                 <?php
                     }
                 ?>
+                </section>
             </aside>
             <aside class="col">
                     <section class="tit">
@@ -151,6 +151,7 @@
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
+                <section class="cont">
                     <?php
                     $conexion = mysqli_connect("localhost", "root", "", "minigames");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Aventura';");
@@ -160,7 +161,6 @@
                         $puntuacion = $lector["puntuacion"];
                         $mand = $lector["id_juego"];
                 ?>
-                <section class="cont">
                         <article class="elcol">
                             <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
                             <section class="sub_col">
@@ -181,10 +181,10 @@
                                 </section>
                             </section>
                         </article>
-                </section>
                 <?php
                     }
                 ?>
+                </section>
                 </aside>
             <aside class="col">
                     <section class="tit">
@@ -194,6 +194,7 @@
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
+                <section class="cont">
                     <?php
                     $conexion = mysqli_connect("localhost", "root", "", "minigames");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Destreza';");
@@ -203,7 +204,6 @@
                         $puntuacion = $lector["puntuacion"];
                         $mand = $lector["id_juego"];
                 ?>
-                <section class="cont">
                         <article class="elcol">
                             <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
                             <section class="sub_col">
@@ -224,10 +224,10 @@
                                 </section>
                             </section>
                         </article>
-                </section>
                 <?php
                     }
                 ?>
+                </section>
                 </aside>
             <aside class="col">
                     <section class="tit">
@@ -237,6 +237,7 @@
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
+                <section class="cont">
                     <?php
                     $conexion = mysqli_connect("localhost", "root", "", "minigames");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Pelea';");
@@ -246,7 +247,6 @@
                         $puntuacion = $lector["puntuacion"];
                         $mand = $lector["id_juego"];
                 ?>
-                <section class="cont">
                         <article class="elcol">
                             <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
                             <section class="sub_col">
@@ -267,10 +267,10 @@
                                 </section>
                             </section>
                         </article>
-                </section>
                 <?php
                     }
                 ?>
+                </section>
                 </aside>
             <aside class="col">
                     <section class="tit">
@@ -280,6 +280,7 @@
                             <param name="scale" value="exactfit">
                         </object>
                     </section>
+                <section class="cont">
                     <?php
                     $conexion = mysqli_connect("localhost", "root", "", "minigames");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Simulacion';");
@@ -289,7 +290,6 @@
                         $puntuacion = $lector["puntuacion"];
                         $mand = $lector["id_juego"];
                 ?>
-                <section class="cont">
                         <article class="elcol">
                             <figure><img class="dbi" src="<?php echo($imagen) ?>"></figure>
                             <section class="sub_col">
@@ -310,10 +310,10 @@
                                 </section>
                             </section>
                         </article>
-                </section>
                 <?php
                     }
                 ?>
+                </section>
                 </aside>
         </section>
         <footer id="terminos">
