@@ -93,10 +93,10 @@
 			echo($opcion);
 			break;
 			case 4:
-				if(isset($_POST['pruebaID']) && isset($_POST['nombre']) && isset($_POST['list']) && isset($_POST['descripcion']) && isset($_POST['puntuacion']) && isset($_POST['instrucciones']) && isset($_POST['dirj']) && isset($_POST['diri'])){
+				if(isset($_POST['pruebaID']) && isset($_POST['nombre']) && isset($_POST['tipo']) && isset($_POST['descripcion']) && isset($_POST['puntuacion']) && isset($_POST['instrucciones']) && isset($_POST['dirj']) && isset($_POST['diri'])){
 					$id = $_POST['pruebaID'];
 					$nom=$_POST['nombre'];
-					$tip=$_POST['list'];
+					$tip=$_POST['tipo'];
 					$desc=$_POST['descripcion'];
 					$punt=$_POST['puntuacion'];
 					$inst=$_POST['instrucciones'];
@@ -113,7 +113,7 @@
 					}
 					echo("-----------------------------------------------------------------------------------------------------------------ya existe :/ <br>");
 					$res = mysqli_query($conexion, "update juegos set nombre='$nom' where id_juego=$id;");
-					$res = mysqli_query($conexion, "update juegos set tipo='$tip' id_juego=$id;");
+					$res = mysqli_query($conexion, "update juegos set tipo='$tip' where id_juego=$id;");
 					$res = mysqli_query($conexion, "update juegos set descripcion='$desc' where id_juego=$id;");
 					$res = mysqli_query($conexion, "update juegos set puntuacion='$punt' where id_juego=$id;");
 					$res = mysqli_query($conexion, "update juegos set instrucciones='$inst' where id_juego=$id;");
