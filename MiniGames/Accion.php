@@ -6,21 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilos/estilo_cat.css">
         <link rel="stylesheet" href="estilos/estilo_accion.css">
-          <link rel="stylesheet" href="css/layout.css">
+        <link rel="styleshett" href="css/menu.css">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="estilo.css">
-          <link rel="stylesheet" href="css/menu.css">
-
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
         <section id="t">
         <section class="bar">
-            <a href="index.php">
-                <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                <a href="index.php">
+                    <article class="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
                 </a>
+            <section class="bar1">
                 <?php
                     include "barramenu.php";
                 ?>
+            </section>
         </section>
             <section id="tsup">
 					<?php 

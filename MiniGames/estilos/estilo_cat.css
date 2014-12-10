@@ -119,16 +119,35 @@ body{
     //padding: 1%;
 }
 .bar{
+    top:0%;
     //border: 1px solid red;
-    height: 5%;
+    height: 12%;
     width: 100%;
+    //float: left;
+}
+.bar a{
+    height: 50%;
+    width: 100%;
+    //float: left;
+}
+.bar1{
+    height: 50%;
+    width: 100%;
+    margin-top: 1.8%;
+    //border: 1px solid red;
+    float: left;
+}
+.art1{
+    margin: 0% 1% 0% 1%;
+    width: 45%;
+    height: 32%;
 }
 #tsup{
     //position: fixed;
     //top: 0%;
     width: 100%;
     height: 4%;
-    margin-top: 1.2%;
+    margin-top: .5%;
     float: left;
     //border: 1px solid red;
     background-color: black;
