@@ -31,11 +31,11 @@
                     <nav class="nav">
                         <li><a href="#">Lista de categorias</a>
                             <ul>
-                                <li><a href="#">Accion</a></li>
-                                <li><a href="#">Aventura</a></li>
-                                <li><a href="#">Destreza</a></li>
-                                <li><a href="#">Pelea</a></li>
-                                <li><a href="#">Simulacion</a></li>
+                                <li><a href="Accion.php?tipoc=Accion">Accion</a></li>
+                                <li><a href="Accion.php?tipoc=Aventura">Aventura</a></li>
+                                <li><a href="Accion.php?tipoc=Destreza">Destreza</a></li>
+                                <li><a href="Accion.php?tipoc=Pelea">Pelea</a></li>
+                                <li><a href="Accion.php?tipoc=Simulacion">Simulacion</a></li>
                             </ul>
                         </li>
                     </nav>
@@ -43,7 +43,6 @@
             </section>
             <?php
                 if(isset($_GET['pos']) || isset($_GET['neg'])){
-                    echo("Entro");
                     if(isset($_GET['pos'])){
                         $lik = $_GET['pos'];
                         $puntuacion = 1;
