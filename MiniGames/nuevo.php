@@ -10,6 +10,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilologin.css">
+        <link rel="stylesheet" href="css/menu.css">
 		<script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
 		
@@ -25,27 +26,10 @@ and open the template in the editor.
                 
                  <aside id="cajabarra">
                 
-       <div class="container">
-
-            <ul id="nav">
-                <li><a href="#">Categorias</a></li>
-                <li><a class="hsubs" href="#">Catalogo</a>
-                 
-                </li>
-                <li><a class="hsubs" href="#">Blog</a>
-                    
-                </li>
-                <li><a class="hsubs" href="contacto.html">Contacto</a>
-                 
-                </li>
-                <li><a href="#">Radio</a></li>
-              
-                <li><a href="acerca de.html">Acerca de</a></li>
-                <div id="lavalamp"></div>
-            </ul>
-       </div>
-                      
-              
+            <?php
+                include "barramenu.php";
+            ?>
+                       
             </aside>
             
             

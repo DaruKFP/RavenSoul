@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilocontac.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="estilo.css">
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
@@ -14,28 +16,10 @@
                 </a>
               </header>
                 
-                 <aside id="cajabarra">
-                
-                    <div class="container">
-
-                        <ul id="nav">
-                            <li><a href="#">Categorias</a></li>
-                            <li><a class="hsubs" href="#">Catalogo</a>
-
-                            </li>
-                            <li><a class="hsubs" href="#">Blog</a>
-
-                            </li>
-                            <li><a class="hsubs" href="contacto.html">Contacto</a>
-
-                            </li>
-                            <li><a href="#">Radio</a></li>
-
-                            <li><a href="acerca de.html">Acerca de</a></li>
-                            <div id="lavalamp"></div>
-                        </ul>
-                   </div>
-                </aside>
+                  <?php
+                include "barramenu.php";
+            ?>
+          
                 <section class="nada">
                 		<!--<section onload(<?php cargar();?>)></section>-->
                          <?php
@@ -132,6 +116,6 @@
                   cargar();
                   ?>
                 </section>
-                
+            </div>
          </body>
 </html>

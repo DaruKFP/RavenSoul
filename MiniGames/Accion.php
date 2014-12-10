@@ -15,7 +15,9 @@
     <body>
         <section id="t">
         <section class="bar">
+            <a href="index.php">
                 <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                </a>
                 <?php
                     include "barramenu.php";
                 ?>

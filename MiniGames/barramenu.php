@@ -33,10 +33,10 @@
             <ul id="nav">
                 <li><a href="juego.php">Categorias</a></li>
                 <li><a class="hsubs" href="Cat.php">Catalogo</a></li>
-                <li><a class="hsubs" href="#">Comentarios</a></li>
+                <li><a class="hsubs" href="blog.php">Comentarios</a></li>
                 <li><a class="hsubs" href="contacto.php">Contacto</a></li>
                 <li><a href="#">Radio</a></li>
-                <li><a href="acerca de.html">Acerca de</a></li>
+                <li><a href="acercade.php">Acerca de</a></li>
                 
                 <div id="lavalamp"></div>
             </ul>
@@ -50,11 +50,11 @@
                 <ul id="nav2">
                     <li><a href="#">Categorias</a></li>
                     <li><a class="hsubs" href="Cat.php">Catalogo</a></li>
-                    <li><a class="hsubs" href="#">Comentarios</a></li>
+                    <li><a class="hsubs" href="blog.php">Comentarios</a></li>
                     <li><a class="hsubs" href="contacto.html">Contacto</a></li>
                     <li><a href="#">Radio</a></li>
-                    <li><a href="acerca de.html">Acerca de</a></li>
-                    <li><a href="acerca de.html">Administrador</a>
+                    <li><a href="acerca de.php">Acerca de</a></li>
+                    <li><a href="#">Administrador</a>
                        <ul class="subs">
                            <li><a href="PerJuegos.html">Juegos</a></li>
                            <li><a href="PerUsuario.html">Usuarios</a></li>

@@ -20,7 +20,7 @@
     <body>
         <div id="caja1">
             <header>
-                <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                <article id="art1"><a href="index.php"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></a></article>
             </header>
             <?php
                 include "barramenu.php";
@@ -53,24 +53,15 @@ arrows: true;
   </script>
   
             <section id="list">
-                <section id="izq">
+               
 				<?php
-				$cont=0;
 			$conexion = mysqli_connect("localhost", "root", "", "minigames");
 			$res = mysqli_query($conexion, "select dir_imagen,nombre from juegos;");
 			while($lector = mysqli_fetch_array($res)){
-			$cont++;
 			$portada = $lector["dir_imagen"];
-			$nombre = $lector["nombre"];
-			if($cont%2){ 
+			$nombre = $lector["nombre"]; 
 			echo "<article id='art1'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li> </ul> </article>";
-         }else{
-                echo"</section>";
-                echo"<section id='der'>";
-                echo"<article id='art3'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li></ul></article>";      
-				echo" </section>";
-			}
-			}
+         		}
 			?>
             </section>
             <!--<section>

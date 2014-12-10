@@ -10,13 +10,15 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilocontac.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="estilo.css">
 		<script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
             <div id="caja1">
                 <header>
-                    <a href="index.html">
+                    <a href="index.php">
             <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
          </a>
         </header>
@@ -25,29 +27,16 @@ and open the template in the editor.
                 
        <div class="container">
 
-            <ul id="nav">
-                <li><a href="#">Categorias</a></li>
-                <li><a class="hsubs" href="#">Catalogo</a>
-                 
-                </li>
-                <li><a class="hsubs" href="#">Blog</a>
-                    
-                </li>
-                <li><a class="hsubs" href="contacto.html">Contacto</a>
-                 
-                </li>
-                <li><a href="#">Radio</a></li>
-              
-                <li><a href="acerca de.html">Acerca de</a></li>
-                <div id="lavalamp"></div>
-            </ul>
+             <?php
+                include "barramenu.php";
+            ?>
        </div>
                       
               
             </aside>
          
             
-            <div id="presentacion">
+            <div id="pre">
                 
                 <div id="cajacontacto">
 					<form method="post" name="Formulario" action="php/funciones.php" >

@@ -20,28 +20,10 @@
             <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
          </a>
         </header>
-       <div class="container">
-
-            <ul id="nav">
-                <li><a href="#">Categorias</a></li>
-                <li><a class="hsubs" href="#">Catalogo</a>
-                 
-                </li>
-                <li><a class="hsubs" href="#">Blog</a>
-                    
-                </li>
-                <li><a class="hsubs" href="contacto.html">Contacto</a>
-                 
-                </li>
-                <li><a href="#">Radio</a></li>
-              
-                <li><a href="acerca de.html">Acerca de</a></li>
-                <div id="lavalamp"></div>
-            </ul>
-       </div>
-              
-                      
-              
+       <?php
+                include "barramenu.php";
+       ?>
+          
             </aside>
 			<form action="php/funciones.php" method="post">
          <div id="presentacion">

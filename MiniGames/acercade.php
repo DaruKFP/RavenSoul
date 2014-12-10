@@ -11,18 +11,20 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="estiloabout.css">
+        <link rel="stylesheet" href="css/menu.css">
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
         <body onload="Inicio()">
+            <div id="caja1">
+            <header>
+                <article id="art1"><a href="index.php"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></a></article>
+            </header>
           <?php
                 include "barramenu.php";
             ?>
-           
-             <div id="Redesymas">
-            </div>
+       
                 <div id="acerca">
                    <DIV ALIGN=center>
                     
@@ -69,5 +71,6 @@ and open the template in the editor.
     
                 </footer>
             </div>
+            
     </body>
 </html>
