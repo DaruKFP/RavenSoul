@@ -31,9 +31,9 @@
 						$tipo = $_GET['tipoc'];
 					}
 					?>
-				<form method="post" action="Accion.php?tipoc=<?php echo($tipo) ?>">
+				<form method="post" id="for" action="Accion.php?tipoc=<?php echo($tipo) ?>">
                 <section id="bus">
-                        <input name="txtbus" type="text" value="">
+                        <input name="txtbus" id="txtbus" type="text" value="">
 						<button type="submit" id="busico">
                     <figure id="busico2">
                         <img src="botones/google-web-search-256.png">
