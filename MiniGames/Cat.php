@@ -14,16 +14,17 @@
     </head>
     <body>
         <section id="t">
-            <section class="bar">
-                <a href="index.php">
-                    <article class="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
-                </a>
-            <section class="bar1">
+            <header>
+            <a href="index.php">   
+            <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+               </a>
+                </header>
+          
                 <?php
                     include "barramenu.php";
                 ?>
-            </section>
-        </section>
+      
+    
             <section id="tsup">
                 <section id="cat">
                     <nav class="nav">

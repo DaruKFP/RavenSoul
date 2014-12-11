@@ -74,10 +74,7 @@ and open the template in the editor.
             </div>
             
             
-            <div id="cajanetwork">
-                <article id="art3"><ul> <li><img src="imagenes/redessociales/tweet.png" width="400" height="320" alt="Img 03" ></li> </ul></article>
-            </div>
-            <footer id="terminos">
+            <footer id="terminos1">
                 
                 <font color="#f0f0f6" size="2" face="Myriad Pro,Bold MS Sans Serif">terminos y usos de condiciones politica y privacidad © 2014 diseñado por minigames  <address>www.minigames.com </address> </font>
                

@@ -41,6 +41,16 @@ body{
       color: #0066cc;
     font-size: 35px;
 }
+#dos3{
+    box-shadow: 0 -1px 10px #cccccc;
+    background-color: #666666;
+    width: 35%;
+    height: 90%;
+    float: right;
+    margin-right: 37%;
+      color: #0066cc;
+    font-size: 35px;
+}
 #uno1:hover{
     box-shadow: 0 -1px 10px #66ffff;
     background-color: #0066ff;
@@ -48,6 +58,12 @@ body{
      font-size: 35px;
 }
 #dos2:hover{
+    box-shadow: 0 -1px 10px #66ffff;
+    background-color: #0066ff;
+    color: white;
+    font-size: 35px;
+}
+#dos3:hover{
     box-shadow: 0 -1px 10px #66ffff;
     background-color: #0066ff;
     color: white;

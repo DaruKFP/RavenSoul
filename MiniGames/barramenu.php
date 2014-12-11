@@ -55,8 +55,8 @@
                     <li><a href="acerca de.php">Acerca de</a></li>
                     <li><a>Administrador</a>
                        <ul class="subs">
-                           <li><a href="PerJuegos.html">Juegos</a></li>
-                           <li><a href="PerUsuario.html">Usuarios</a></li>
+                           <li><a href="PerJuegos.php">Juegos</a></li>
+                           <li><a href="PerUsuario.php">Usuarios</a></li>
                        
                     </ul>
                     </li>

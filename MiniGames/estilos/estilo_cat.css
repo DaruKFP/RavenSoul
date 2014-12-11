@@ -3,21 +3,7 @@
     Author     : RavenSoul
 */
 body{
-    background:url(../imagenes/fondo-web.jpg) repeat-x fixed;
-    background:linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-moz-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-o-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-ms-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-webkit-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:#111 no-repeat;
-/*	background:url(../imagenes/fondo-web.jpg) repeat-x fixed;
-	background:linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-moz-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-o-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-ms-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-webkit-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;*/
-    padding: 0%;
-    margin: 0%;
+    
 }
 .nav li{
     background: url('../css/menu_line.png') no-repeat scroll right 5px transparent;

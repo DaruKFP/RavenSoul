@@ -234,9 +234,7 @@
                         <figure class="db"><img class="dbi" src=""><figcaption><a>Jugar</a></figcaption></figure>
                     </article>-->
                 </section>
-                <section id="paginas">
-                </section>
-                
+          
 
         </section>
     <footer id="terminos">
