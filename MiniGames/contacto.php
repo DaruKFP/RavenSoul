@@ -18,24 +18,11 @@ and open the template in the editor.
     <body>
             <div id="caja1">
                 <header>
-                    <a href="index.php">
-            <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
-         </a>
-        </header>
-                
-                 <aside id="cajabarra">
-                
-       <div class="container">
-
-             <?php
+                <article id="art1"><a href="index.php"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></a></article>
+            </header>
+            <?php
                 include "barramenu.php";
             ?>
-       </div>
-                      
-              
-            </aside>
-         
-            
             <div id="pre">
                 
                 <div id="cajacontacto">
