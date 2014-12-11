@@ -1,14 +1,18 @@
 <html>
 <head>
 	<title>pagina juegos</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="estilojuego.css">
-        <link rel="stylesheet" href="estilos/comentario.css">
+        <link rel="stylesheet" href="estilos/comentario.css">    
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="funciones.js"></script>
 		<script src="carrucel2.js"></script>
-                <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
-			<script src="jquery.js"></script>
-		    <script type="text/javascript" src="slick.min.js"></script>
-			<link rel="stylesheet" type="text/css" href="slick.css"/>
-            <script type="text/javascript">
+        <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
+		<script src="jquery.js"></script>
+		<script type="text/javascript" src="slick.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="slick.css"/>
+        <script type="text/javascript">
 
     function objetoAjax(){
         var xmlhttp = false;
@@ -71,16 +75,17 @@ $(document).ready(function() {
 <body onload="inicio()">
 	<div id="caja">
              <section id="tsup">
-                <header id="th">
-                </header>
-                <section id="bus">
-                        <input id="txtbus" type="text">
-                        <a href="index.php"> <article id="logo"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article></a>
-                    <figure id="busico">
-                        <img src="botones/google-web-search-256.png" height="100%">
-                    </figure>
+                <section class="bar">
+                    <a href="index.php">
+                        <article class="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                    </a>
+                <section class="bar1">
+                    <?php
+                        include "barramenu.php";
+                    ?>
                 </section>
-        </section>
+                </section>
+            </section>
             			
 			
             <section id="contenedor">
