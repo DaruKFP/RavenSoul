@@ -109,7 +109,7 @@
                   //termina comento
                     echo"<form id='comentar1' method='POST' action='php/blog_1.php'>";
                                         //<font face="Comic Sans MS" size="3">
-                                    echo "<textarea id='comentar' name='comentar' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c'>";
+                                    echo "<textarea id='comentar' required='Escribe algo' name='comentar' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c'>";
                                         echo "</textarea>";
                                         echo"<button class='btncomentar' type='submit' value='0' name='btn' id='btn'></button>"; 
                                     echo"</form>";
