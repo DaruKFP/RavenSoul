@@ -77,7 +77,7 @@
                     <li><a class="hsubs" href="blog.php">Comentarios</a></li>
                     <li><a class="hsubs" href="contacto.php">Contacto</a></li>
                     <li><a href="#">Radio</a></li>
-                    <li><a href="acerca de.php">Acerca de</a></li>
+                    <li><a href="acercade.php">Acerca de</a></li>
                     <li><a>Administrador</a>
                        <ul class="subs">
                            <li><a href="PerJuegos.php">Juegos</a></li>
