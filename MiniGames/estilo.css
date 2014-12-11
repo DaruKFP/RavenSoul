@@ -131,7 +131,7 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	z-index: 3;
 }
 
-#ini_error{
+.inierror{
 	z-index: 5;
 	border: 3px solids slategrey;
 	position: absolute;

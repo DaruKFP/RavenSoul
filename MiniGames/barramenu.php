@@ -7,11 +7,36 @@
         <button  id="boton2" type="button" onclick="cerrar()">Cancelar</button>
     </form>
 </div>
-<div id="ini_error">
+<div id="ini_error" class="inierror">
     <img class="errorbtn" src="botones/error.png" width="50" height="50">
     <p><h1>ERROR: Usuario o contraseña incorrecta</h1></p>
-    <button class="botonerror" type="button" onclick="cerrar_error()">Cancelar</button>
+    <button class="botonerror" type="button" onclick="cerrar_error('ini_error')">Cancelar</button>
 </div>
+
+<div id="guard_error" class="inierror">
+    <img class="errorbtn" src="botones/error.png" width="50" height="50">
+    <p><h1>ERROR: Al intentar guardar juego</h1></p>
+    <button class="botonerror" type="button" onclick="cerrar_error2('guard_error')">Cancelar</button>
+</div>
+
+<div id="user_error" class="inierror">
+    <img class="errorbtn" src="botones/error.png" width="50" height="50">
+    <p><h1>ERROR: Usuario ya existente</h1></p>
+    <button class="botonerror" type="button" onclick="cerrar_error2('user_error')">Cancelar</button>
+</div>
+
+<div id="user2_error" class="inierror">
+    <img class="errorbtn" src="botones/error.png" width="50" height="50">
+    <p><h1>ERROR: No se ha registrado correctamente el usuario</h1></p>
+    <button class="botonerror" type="button" onclick="cerrar_error2('user2_error')">Cancelar</button>
+</div>
+
+<div id="contacto_error" class="inierror">
+    <img class="errorbtn" src="botones/error.png" width="50" height="50">
+    <p><h1>ERROR: Tiene que llenar correctamente todos los campos</h1></p>
+    <button class="botonerror" type="button" onclick="cerrar_error2('contacto_error')">Cancelar</button>
+</div>
+
 <?php
     $tipo=0;
     session_start();
@@ -82,17 +107,27 @@
                 switch($err){
                     case 1:
 ?>
-                        <script type="text/javascript">msj_error()</script>
+                        <script type="text/javascript">msj_error("ini_error")</script>
 <?php
                     break;
                     case 2:
 ?>
-                        <script>
-                            var cub = document.getElementById("cubierta");
-                            cub.style.display = "block";
-
-                            alert("llego  aqi");
-                        </script>
+                        <script type="text/javascript">msj_error("guard_error");</script>
+<?php
+                    break;
+					case 3:
+?>
+                        <script type="text/javascript">msj_error("user_error");</script>
+<?php
+                    break;
+					case 4:
+?>
+                        <script type="text/javascript">msj_error("user2_error");</script>
+<?php
+                    break;
+					case 5:
+?>
+                        <script type="text/javascript">msj_error("contacto_error");</script>
 <?php
                     break;
                 }

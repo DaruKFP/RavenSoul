@@ -41,7 +41,7 @@ and open the template in the editor.
                 <legend><strong>Registrar</strong></legend>
                     <p>
                         <label>Nick </label>
-                        <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="nick" name="nick" placeholder="Nick" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">
+                        <input onkeypress="chequear()" type="text" id="nick" name="nick" placeholder="Nick" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">
                   
                     <div id="fuente">     
              <br>
@@ -49,7 +49,7 @@ and open the template in the editor.
               <HR ALIGN=center size="2" width="600" color="#6f9c9d"> 
 		<p>
                         <label>Nombre</label>
-                        <input type="text" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="nombre" id="nombre" placeholder="Nombre de usuario" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" onkeypress="chequear()" name="nombre" id="nombre" placeholder="Nombre de usuario" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	 
          
                          <br>
@@ -69,43 +69,42 @@ and open the template in the editor.
 			<br>
                         <p>
                         <label id="contras1">Contraseña</label>
-                        <input type="password" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="contra" id="contra" placeholder="Ingrese contraseña" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="password" onkeypress="chequear()"  name="contra" id="contra" placeholder="Ingrese contraseña" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
               <HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
               <label id="contras2">Reingrese la contraseña</label>
-                        <input type="password" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="rcontra" id="rcontra" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="password" onkeypress="chequear()" name="rcontra" id="rcontra" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
              <HR ALIGN=center size="2" width="600" color="#6f9c9d">
                <p>
                    <label id="correos1">Correo Electronico</label>
-                        <input type="text" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="email" id="email" placeholder="ingrese su email" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" onkeypress="chequear()" name="email" id="email" placeholder="ingrese su email" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>	
                         
              <br>
              <HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
                    <label id="correos2">Reingrese el Correo Electronico</label>
-                        <input type="text" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="remail" id="remail" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="text" onkeypress="chequear()" name="remail" id="remail" placeholder="Para asegurar coinsidencias" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>
 
 				<HR ALIGN=center size="2" width="600" color="#6f9c9d">
               <p>
                    <label>Fecha de nacimiento</label>
-                        <input type="date" onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="dd-mm-aaaa" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
+                        <input type="date" onkeypress="chequear()" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="dd-mm-aaaa" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #1140fe;asdas">
                     </p>
 					<HR ALIGN=center size="2" width="600" color="#6f9c9d">
 					<label> Descripcion </label>
-						<textarea id="descripcion"  onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()"  name="descripcion" style="resize:none;" rows="3" cols="30" placeholder="escribe tu descripcion"></textarea>
+						<textarea id="descripcion" onkeypress="chequear()"  name="descripcion" style="resize:none;" rows="3" cols="30" placeholder="escribe tu descripcion"></textarea>
                         </div>
              
              <div id="botonaceptar">
              <button type="submit" name="opc" id="bt" value="2"><img src="imagenes/registrar.png" width="95" height="40" alt="Img01"></button>
-             <!-- style="display:none;" -->
              </div>
             </div>
 		

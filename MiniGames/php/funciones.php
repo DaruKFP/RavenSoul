@@ -44,29 +44,23 @@
 					$fecha = $_POST['fecha_nacimiento'];
 					$descripcion = $_POST['descripcion'];
 					
-					echo("$nick <br> $nombre <br> $contra <br> $email <br> $sexo <br> $fecha <br> $descripcion <br> ");
-					
 					$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 					$res = mysqli_query($conexion, "select * from usuarios where nick='$nick';");
 					if($lector = mysqli_fetch_array($res)){
 					/* mandar decir que el nick ya existe */
-					echo("<br><br>///////////////////////////////////////////////////////////////////////////////////////////////////////<br>Este ya existe xD <br>");
-					for($i=0;$i<9;$i++){
-						echo("$lector[$i] <br>");
-					}
-					echo("-----------------------------------------------------------------------------------------------------------------ya existe :/ <br>");
+						echo("<form method='post' action='../nuevo.php'><button type='submit' id='bot' name='regreso_error' value='3'>Iniciar</button></form>");
+						echo("<script>var b = document.getElementById('bot');b.click();</script>");
 					}else{
 					echo("------------------------------------------------------------------------------------------------------------------va a guardar :/");
 					$res = mysqli_query($conexion, "insert into usuarios values('$nick','reg','$nombre',password('$contra'),'$sexo','$email','$fecha','$descripcion');");
 					echo("<br>---------------------------------------------------------------------------------------------------------------<br>$res");
 					if(1 == $res){
-					echo("<script> alert('Guardado correctamente');</script>");
-					session_start();
-					$_SESSION['inicio'] = $nick;
-					header("Location: ../index.php");
+						session_start();
+						$_SESSION['inicio'] = $nick;
+						header("Location: ../index.php");
 					}else{
-					echo("<script> alert('Guardado incorrectamente');</script>");
-					
+						echo("<form method='post' action='../nuevo.php'><button type='submit' id='bot' name='regreso_error' value='4'>Iniciar</button></form>");
+						echo("<script>var b = document.getElementById('bot');b.click();</script>");
 					}
 					}
 					
@@ -86,11 +80,9 @@
 			echo("<form method='post' action='../contacto.php'><button type='submit' id='bot' name='regreso_error' value='1'>Iniciar</button></form>");
 			echo("<script>var b = document.getElementById('bot');b.click();</script>");
 			}else{
-			echo("<script> alert('llene todos los campos antes de enviar');</script>");
+				echo("<form method='post' action='../contacto.php'><button type='submit' id='bot' name='regreso_error' value='5'>Iniciar</button></form>");
+				echo("<script>var b = document.getElementById('bot');b.click();</script>");
 			}
-			break;
-			default:
-			echo($opcion);
 			break;
 			case 4:
 				if(isset($_POST['pruebaID']) && isset($_POST['nombre']) && isset($_POST['tipo']) && isset($_POST['descripcion']) && isset($_POST['puntuacion']) && isset($_POST['instrucciones']) && isset($_POST['dirj']) && isset($_POST['diri'])){
@@ -136,17 +128,13 @@
 			$res = mysqli_query($conexion, "delete from usuarios where nick='$nick';");
 			echo"$res";
 			if(1 == $res){
-			echo("<script> alert('eliminado correctamente');</script>");
-			header("Location: ../ModUsarios.php");
+				header("Location: ../ModUsarios.php");
 			}
 			}
 			break;
 			case 6:
-			echo"entro en 6";
 			$rango = $_POST['Rango'];
 			$nick = $_POST['nick'];
-			echo"$rango";
-			echo"$nick";
 			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "update usuarios set tipo_de_usuario ='$rango' where nick='$nick';");
 			echo"$res";
@@ -168,21 +156,20 @@
 			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 		    $res = mysqli_query($conexion, "insert into juegos values($id,'reg','$nom','$genero','$desc',0,'$inst','$dirj','$diri','$porta');");
 			//$res = mysqli_query($conexion,"insert into juegos values(5,'reg','ddd','aaaa','dddd',0,'aaaaa','j','dddi','ddddd');");	
+			//la condicion aveces devuelve 1 o un booleano y por eso aveces marca error
 			if(1== $res){
-			header("Location: ../nuevoJuego.php");
-			echo("<script> alert('Se guardaron los datos del juego');</script>");
+				header("Location: ../nuevoJuego.php");
 			}else{
-			echo"no se guardo";
-			echo"$res";
+				echo("<form method='post' action='../index.php'><button type='submit' id='bot' name='regreso_error' value='2'>Iniciar</button></form>");
+				echo("<script>var b = document.getElementById('bot');b.click();</script>");
 			}
 			}
 
 			break;
-			echo($opcion);
 			case 8:
 			session_start();
-			session_destroy();
-			header("Location: ../index.php");
+				session_destroy();
+				header("Location: ../index.php");
 			break;
 		}
 	}else{

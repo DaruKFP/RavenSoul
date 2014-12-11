@@ -32,26 +32,26 @@ and open the template in the editor.
                     <legend><strong>Formulario de contacto</strong></legend>
                     <p>
                         <label>Nombre: </label>
-                        <input type="text" onkeydown="chequearr('2')" onkeypress="chequear('2')" onchange="prueba3()" id="nombre" name="nombre" placeholder="nombre" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#484c4c;asdas">
+                        <input type="text" onkeypress="chequear()" id="nombre" name="nombre" placeholder="nombre" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#484c4c;asdas">
                     </p>
                     <p>
                         <label>Email: </label>
-                        <input type="text" onkeydown="chequearr('2')" onkeypress="chequear('2')" onchange="prueba3()" id="email" name="email" placeholder="Email" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #484c4c;asdas">
+                        <input type="text" onkeypress="chequear()" id="email" name="email" placeholder="Email" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #484c4c;asdas">
                     </p>
                       <p>
                         <label>Tema: </label>
-                        <input type="text" onkeydown="chequearr('2')" onkeypress="chequear('2')" onchange="prueba3()" id="tema" name="tema" placeholder="Tema" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #484c4c;asdas">
+                        <input type="text" onkeypress="chequear()" id="tema" name="tema" placeholder="Tema" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color: #484c4c;asdas">
                     </p>
                     </fieldset>
                     <div id='botonaceptar'>
-                       <button style="display:none" name="opc" id="boton" value="3" type="submit"><img src="imagenes/guardar.png"  width="100" height="40" alt="Img01" ></button>
+                       <button name="opc" id="boton" value="3" type="submit" style="width:100%; height:100%;"><img src="imagenes/guardar.png"  width="100%" height="100%" alt="Img01" ></button>
                     </div>
                     <fieldset id="mensaje">
                     <legend ><strong>Mensaje</strong></legend>
                     <p>
                     <form>
 <font face="Comic Sans MS" size="3">
-<textarea name="comentario" id="comentario" onkeydown="chequearr('2')" onkeypress="chequear('2')" onchange="prueba3()" cols="40" rows="5" style="width:400px;height:300px;font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c;asdas">
+<textarea name="comentario" id="comentario" onkeypress="chequear()" cols="40" rows="5" style="width:400px;height:300px;font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c;asdas">
 </textarea>
 </font>
 </form>
