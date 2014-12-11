@@ -49,7 +49,7 @@ and open the template in the editor.
                 <label class="letra" for="nam">Nick:</label>
 				<select id="nick" name="nick">
 				<?php 
-				$conexion = mysqli_connect("localhost", "root", "", "minigames");
+				$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 				$res = mysqli_query($conexion, "select nick from usuarios;");
 				while($lector = mysqli_fetch_array($res)){
 				$id = $lector["nick"];

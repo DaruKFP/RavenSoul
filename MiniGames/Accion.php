@@ -34,9 +34,9 @@
 				<form method="post" action="Accion.php?tipoc=<?php echo($tipo) ?>">
                 <section id="bus">
                         <input name="txtbus" type="text" value="">
-						<button type="submit">
-                    <figure id="busico">
-                        <img src="botones/google-web-search-256.png" height="100%">
+						<button type="submit" id="busico">
+                    <figure id="busico2">
+                        <img src="botones/google-web-search-256.png">
                     </figure>
 						</button>
                 </section>
@@ -127,7 +127,7 @@
                         $lik = $_GET['neg'];
                         $puntuacion = -1;
                     }
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select puntuacion from juegos where id_juego='$lik';");
                     if($lector = mysqli_fetch_array($res)){
                         $puntuacion += $lector["puntuacion"];
@@ -144,7 +144,7 @@
 					}else{
 						$busc = "";
 					}
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='$tipo' and nombre like '%$busc%';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];

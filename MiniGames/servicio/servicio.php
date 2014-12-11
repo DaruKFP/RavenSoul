@@ -3,7 +3,7 @@
       
      function getDatos($parametro1) {
           $datos =  array();
-          $conexion = mysqli_connect("localhost", "root", "", "minigames");
+          $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
           $result = mysqli_query($conexion, "select nombre, descripcion, dir_imagen from juegos");
           while($row = mysqli_fetch_array($result)){
                array_push($datos, $row["nombre"]);

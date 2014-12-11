@@ -10,6 +10,8 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilologin.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="css/menu.css">
 		<script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
@@ -34,7 +36,7 @@ and open the template in the editor.
             
             
        
-            <div id="presentacion">
+            <div id="presentacion1">
 			<form method="post" name="Formulario" action="php/funciones.php">
                 <legend><strong>Registrar</strong></legend>
                     <p>

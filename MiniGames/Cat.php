@@ -48,7 +48,7 @@
                         $lik = $_GET['neg'];
                         $puntuacion = -1;
                     }
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select puntuacion from juegos where id_juego='$lik';");
                     if($lector = mysqli_fetch_array($res)){
                         $puntuacion += $lector["puntuacion"];
@@ -66,7 +66,7 @@
                         </object>
                 </section>
                 <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Nuevo';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];
@@ -107,7 +107,7 @@
                     </section>
                 <section class="cont">
                     <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Accion';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];
@@ -150,7 +150,7 @@
                     </section>
                 <section class="cont">
                     <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Aventura';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];
@@ -193,7 +193,7 @@
                     </section>
                 <section class="cont">
                     <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Destreza';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];
@@ -236,7 +236,7 @@
                     </section>
                 <section class="cont">
                     <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Pelea';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];
@@ -279,7 +279,7 @@
                     </section>
                 <section class="cont">
                     <?php
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='Simulacion';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];

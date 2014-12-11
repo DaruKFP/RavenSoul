@@ -8,6 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
         <link rel="stylesheet" href="EstiloNuevoJuego.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="styleshett" href="css/menu.css">
 		
   </head>
 </head>
@@ -26,7 +29,7 @@
           
             </aside>
 			<form action="php/funciones.php" method="post">
-         <div id="presentacion">
+         <div id="presentacion1">
               <label>Id juego </label>
               <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="id" placeholder="Id del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
              <br>

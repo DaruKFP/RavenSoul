@@ -17,7 +17,7 @@
     session_start();
     if(isset($_SESSION['inicio'])){
         $usuario = $_SESSION['inicio'];
-        $conexion = mysqli_connect("localhost", "root", "", "minigames");
+        $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
         $res = mysqli_query($conexion, "select tipo_de_usuario from usuarios where nick='$usuario';");
         if($lector = mysqli_fetch_array($res)){
             if($lector[0]=="prog" || $lector[0]=="admin"){
@@ -31,13 +31,12 @@
 ?>
         <div class="container">
             <ul id="nav">
-                <li><a href="juego.php">Categorias</a></li>
+                <li><a href="Accion.php?tipoc=Accion">Categorias</a></li>
                 <li><a class="hsubs" href="Cat.php">Catalogo</a></li>
                 <li><a class="hsubs" href="blog.php">Comentarios</a></li>
                 <li><a class="hsubs" href="contacto.php">Contacto</a></li>
                 <li><a href="#">Radio</a></li>
                 <li><a href="acercade.php">Acerca de</a></li>
-                
                 <div id="lavalamp"></div>
             </ul>
        </div>
@@ -48,13 +47,13 @@
             <div class="container">
 
                 <ul id="nav2">
-                    <li><a href="#">Categorias</a></li>
+                    <li><a href="Accion.php?tipoc=Accion">Categorias</a></li>
                     <li><a class="hsubs" href="Cat.php">Catalogo</a></li>
                     <li><a class="hsubs" href="blog.php">Comentarios</a></li>
-                    <li><a class="hsubs" href="contacto.html">Contacto</a></li>
+                    <li><a class="hsubs" href="contacto.php">Contacto</a></li>
                     <li><a href="#">Radio</a></li>
                     <li><a href="acerca de.php">Acerca de</a></li>
-                    <li><a href="#">Administrador</a>
+                    <li><a>Administrador</a>
                        <ul class="subs">
                            <li><a href="PerJuegos.html">Juegos</a></li>
                            <li><a href="PerUsuario.html">Usuarios</a></li>
@@ -99,7 +98,7 @@
                 }
             }
             }else{
-                $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                 $res = mysqli_query($conexion, "select tipo_de_usuario from usuarios where nick='$usuario';");
 
                 if($tipo == 1){

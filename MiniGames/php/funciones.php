@@ -13,14 +13,14 @@
 					//session_start();
 					$nick = $_POST['nick'];
 					$pass = $_POST['contra'];
-					$conexion = mysqli_connect("localhost", "root", "", "minigames");
-					$res = mysqli_query($conexion, "select * from usuarios where nick='$nick' and contraseña=password('$pass');");
+					$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
+					$res = mysqli_query($conexion, "select * from usuarios where nick='$nick' and contraseÃ±a=password('$pass');");
 					if($lector = mysqli_fetch_array($res)){
 						session_start();
 						$_SESSION['inicio'] = $nick;
 						header("Location: ../index.php");
 					}else{
-						/*Usuario o contraseña incorecto */
+						/*Usuario o contraseÃ±a incorecto */
 						echo("<form method='post' action='../index.php'><button type='submit' id='bot' name='regreso_error' value='1'>Iniciar</button></form>");
 						echo("<script>var b = document.getElementById('bot');b.click();</script>");
 						/*header("Location: ../index.php");*/
@@ -28,8 +28,8 @@
 					mysqli_free_result($res);
 					mysqli_close($conexion);
 				}else{
-					/*Falta contraseña o nick*/
-					//echo("<output name='regreso_error' value=´2´></output>");
+					/*Falta contraseÃ±a o nick*/
+					//echo("<output name='regreso_error' value=Â´2Â´></output>");
 					/*header("Location: ../index.php");*/
 				}
 			break;
@@ -46,7 +46,7 @@
 					
 					echo("$nick <br> $nombre <br> $contra <br> $email <br> $sexo <br> $fecha <br> $descripcion <br> ");
 					
-					$conexion = mysqli_connect("localhost", "root", "", "minigames");
+					$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 					$res = mysqli_query($conexion, "select * from usuarios where nick='$nick';");
 					if($lector = mysqli_fetch_array($res)){
 					/* mandar decir que el nick ya existe */
@@ -102,7 +102,7 @@
 					$inst=$_POST['instrucciones'];
 					$direcj=$_POST['dirj'];
 					$direci=$_POST['diri'];
-					$conexion = mysqli_connect("localhost", "root", "", "minigames");
+					$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 					$res = mysqli_query($conexion, "select * from juegos where id_juego='$id';");
 					if($lector = mysqli_fetch_array($res)){
 					//echo($lector);
@@ -121,6 +121,7 @@
 					$res = mysqli_query($conexion, "update juegos set dir_imagen='$direci' where id_juego=$id;");
 					if(1 == $res){
 						echo("<script> alert('cambiado correctamente');</script>");
+						header("Location: ../ModJuegos.php");
 					}else{
 					echo"$res";
 					echo("$id <br> $nom <br> $tip <br> $desc <br> $punt <br> $inst <br> $direcj <br> $direci <br> -$res- <br> ");
@@ -131,7 +132,7 @@
 			case 5:
 			if(isset($_POST['nick'])){
 			$nick = $_POST['nick'];
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "delete from usuarios where nick='$nick';");
 			echo"$res";
 			if(1 == $res){
@@ -146,7 +147,7 @@
 			$nick = $_POST['nick'];
 			echo"$rango";
 			echo"$nick";
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "update usuarios set tipo_de_usuario ='$rango' where nick='$nick';");
 			echo"$res";
 			if(1 == $res){
@@ -164,7 +165,7 @@
 			$porta=$_POST['dirp'];
 			$dirj=$_POST['dirj'];
 			$diri=$_POST['diri'];
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 		    $res = mysqli_query($conexion, "insert into juegos values($id,'reg','$nom','$genero','$desc',0,'$inst','$dirj','$diri','$porta');");
 			//$res = mysqli_query($conexion,"insert into juegos values(5,'reg','ddd','aaaa','dddd',0,'aaaaa','j','dddi','ddddd');");	
 			if(1== $res){

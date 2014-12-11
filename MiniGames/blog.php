@@ -26,7 +26,7 @@
                 		<!--<section onload(<?php cargar();?>)></section>-->
                          <?php
                          function cargar(){
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 
                     $res = mysqli_query($conexion, "select * from comentarios order by num_com");
                     $comento= array();

@@ -7,7 +7,7 @@
                     if(isset($_POST['btn'])){
                         $btn= $_POST['btn'];
                         $comentario_nuevo= $_POST['comentar'];
-                        $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                        $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                         $num_com=0;
                         $res = mysqli_query($conexion, "select num_com from comentarios order by num_com desc limit 1");
                         if($lector = mysqli_fetch_array($res)){

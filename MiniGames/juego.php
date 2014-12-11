@@ -88,7 +88,7 @@ $(document).ready(function() {
                 <?php 
 			if(isset($_GET['nombre'])){
 			$nombre=$_GET['nombre'];
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "select * from juegos where nombre='$nombre';");
 			if($lector = mysqli_fetch_array($res)){
 			$id = $lector["id_juego"];
@@ -112,7 +112,7 @@ $(document).ready(function() {
              <div id="sugerencias" class="c">
             <h1>Juegos que te pueden interesar</h1>
 			<?php
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "select dir_imagen,nombre from juegos;");
 			while($lector = mysqli_fetch_array($res)){
 			$portada = $lector["dir_imagen"];
