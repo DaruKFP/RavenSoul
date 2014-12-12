@@ -5,7 +5,7 @@
 		switch($opcion){
 			case 0:
 				echo("Hay algun error asi que busca");
-				/*header("Location: index.php");*/
+				header("Location: ../index.php");
 			break;
 			case 1:
 				//Iniciar  sesion
@@ -185,6 +185,6 @@
 			break;
 		}
 	}else{
-		echo("No hay nada");
+		header("Location: ../index.php");
 	}
 ?>
