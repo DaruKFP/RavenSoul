@@ -9,7 +9,9 @@ and open the template in the editor.
         <title>Acerca de MiniGames</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <script src="funciones.js"></script>
+        <script src="/presentacion.js"></script>
+	<script src="jquery.js"></script>
 <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="estilo.css">
         <link rel="stylesheet" href="estiloabout.css">

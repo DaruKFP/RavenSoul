@@ -3,21 +3,7 @@
     Author     : RavenSoul
 */
 body{
-    background:url(../imagenes/fondo-web.jpg) repeat-x fixed;
-    background:linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-moz-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-o-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-ms-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:-webkit-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-    background:#111 no-repeat;
-/*	background:url(../imagenes/fondo-web.jpg) repeat-x fixed;
-	background:linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-moz-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-o-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-ms-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;
-	background:-webkit-linear-gradient(top, #000, #353535 300px, #000 300px, #353535) repeat-x fixed;*/
-    padding: 0%;
-    margin: 0%;
+    
 }
 .nav li{
     background: url('../css/menu_line.png') no-repeat scroll right 5px transparent;
@@ -119,16 +105,35 @@ body{
     //padding: 1%;
 }
 .bar{
+    top:0%;
     //border: 1px solid red;
-    height: 5%;
+    height: 12%;
     width: 100%;
+    //float: left;
+}
+.bar a{
+    height: 50%;
+    width: 100%;
+    //float: left;
+}
+.bar1{
+    height: 50%;
+    width: 100%;
+    margin-top: 1.8%;
+    //border: 1px solid red;
+    float: left;
+}
+.art1{
+    margin: 0% 1% 0% 1%;
+    width: 45%;
+    height: 32%;
 }
 #tsup{
     //position: fixed;
     //top: 0%;
     width: 100%;
     height: 4%;
-    margin-top: 1.2%;
+    margin-top: .5%;
     float: left;
     //border: 1px solid red;
     background-color: black;
@@ -148,25 +153,40 @@ body{
     height: 100%;
     width: 100%;
 }
+#for{
+    height: 60%;
+    width: 50%;
+    float: left;
+    //border: 1px solid red;
+    margin-left: 10%;
+}
 #bus{
-    margin-left: 25%;
+    //margin-left: 15%;
     padding: 0%;
-    width: 40%;
-    //border: 2px solid salmon;
+    width: 100%;
+    //border: 1px solid salmon;
     height: 100%;
     float: left;
 }
 #txtbus{
-    width: 85%;
-    height: 80%;
+    width: 75%;
+    height: 100%;
     float:left;
     border-radius: 8px;
 }
 #busico{
     width: 10%;
-    height: 90%;
+    height: 100%;
     //border:2px solid orange;
     float:left;
+}
+#busico2{
+    height: 100%;
+    width: 100%;
+}
+#busico2 img{
+    height: 100%;
+    width: 100%;
 }
 #cat{
     width: 24%;

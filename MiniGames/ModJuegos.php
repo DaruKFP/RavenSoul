@@ -28,7 +28,8 @@
                 <button onclick="funcion()"  class="botoncini" value="1" name="btn">Buscar</button>
                 <select id="id" name="id">
 				<?php 
-				$conexion = mysqli_connect("localhost", "root", "", "minigames");
+
+				$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");//("localhost", "root", "", "minigames");
 				$res = mysqli_query($conexion, "select id_juego from juegos;");
 				while($lector = mysqli_fetch_array($res)){
 				$id = $lector["id_juego"];
@@ -42,12 +43,13 @@
                 <br>
                 <br>
                 <br>
-                 <hr align=center size="2" width="600" color="#0099ff"> 
-				 <?php
-				$id=$_POST['id'];
-				if(isset($_POST['btn'])){
-				$bot=$_POST['btn'];
-				if($bot == 1){
+                <hr align=center size="2" width="600" color="#0099ff"> 
+			    <?php
+                if(isset($_POST['id'])){
+				    $id=$_POST['id'];
+                }else{
+                    $id=1;
+                }
 				$res = mysqli_query($conexion, "select * from juegos where id_juego=$id;");
 				if($lector = mysqli_fetch_array($res)){
 				$id= $lector[0];
@@ -60,21 +62,10 @@
 				$dir_juego= $lector[7];
 				$di_imagen= $lector[8];
 				$portada= $lector[9];
-			
-				}
 				}else{
-				if($_POST['btn1'] == 2){
-				$nom=$_POST['nombre'];
-				$tip=$_POST['list'];
-				$desc=$_POST['descripcion'];
-				$punt=$_POST['puntuacion'];
-				$inst=$_POST['instrucciones'];
-				$direcj=$_POST['dirj'];
-				$direci=$_POST['diri'];
-				$res = mysqli_query($conexion, "update juegos set nombre=$nom, tipo=$tip,descripcion=$desc, puntuacion=$punt, instrucciones=$inst, dir_juego=$direcj, dir_imagen=$direci");
-				}
-				}
-			 }
+
+                    //Algo paso porque hubo error
+                }
 				 ?>
                  <section id="form1">
                 <label id="letras">Nombre</label>

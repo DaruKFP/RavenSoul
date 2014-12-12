@@ -1,32 +1,28 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Nuevo juego</title>
-    <head>
+
         <title>Modificacion de video juegos</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
+             <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="EstiloNuevoJuego.css">
-		
+		<script src="funciones.js"></script>
   </head>
-</head>
-
 <body>
     <div id="caja1">
-          <aside id="cajabarra">
-                  <header>
-                    <a href="index.php">
-            <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
-         </a>
-        </header>
-       <?php
+              <header>
+                <article id="art1"><a href="index.php"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></a></article>
+            </header>
+            <?php
                 include "barramenu.php";
-       ?>
-          
-            </aside>
+            ?>
 			<form action="php/funciones.php" method="post">
-         <div id="presentacion">
+         <div id="presentacion1">
               <label>Id juego </label>
               <input onkeydown="chequearr('1')" onkeypress="chequear('1')" onchange="prueba()" type="text" id="id" name="id" placeholder="Id del juego" cols="40" rows="5" style="width:300px;height:20px;font-size:12px;font-family:Comic Sans MS;color:#1140fe;asdas">      
              <br>

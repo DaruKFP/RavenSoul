@@ -4,27 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilocontac.css">
-        <link rel="stylesheet" href="css/menu.css">
+        
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
-            <div id="caja1">
-              <header>
+            <section class="bar">
                 <a href="index.php">
-                    <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                    <article class="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
                 </a>
-              </header>
-                
-                  <?php
-                include "barramenu.php";
-            ?>
-          
+            <section class="bar1">
+                <?php
+                    include "barramenu.php";
+                ?>
+            </section>
+          </sextion>
                 <section class="nada">
                 		<!--<section onload(<?php cargar();?>)></section>-->
                          <?php
                          function cargar(){
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 
                     $res = mysqli_query($conexion, "select * from comentarios order by num_com");
                     $comento= array();
@@ -107,7 +109,7 @@
                   //termina comento
                     echo"<form id='comentar1' method='POST' action='php/blog_1.php'>";
                                         //<font face="Comic Sans MS" size="3">
-                                    echo "<textarea id='comentar' name='comentar' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c'>";
+                                    echo "<textarea id='comentar' required='Escribe algo' name='comentar' cols='90' rows='5' style='font-size:12px;font-family:Comic Sans MS;background-image:url(images/1.jpg);color:#484c4c'>";
                                         echo "</textarea>";
                                         echo"<button class='btncomentar' type='submit' value='0' name='btn' id='btn'></button>"; 
                                     echo"</form>";
@@ -116,6 +118,6 @@
                   cargar();
                   ?>
                 </section>
-            </div>
+            
          </body>
 </html>

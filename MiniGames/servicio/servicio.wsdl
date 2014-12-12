@@ -28,7 +28,7 @@
 </binding>
 <service name="Servicio web para juegos">
   <port name="Servicio web para juegosPort" binding="tns:Servicio web para juegosBinding">
-    <soap:address location="http://localhost/ravensoul/minigames/servicio/servicio.php"/>
+    <soap:address location="http://minigames.zz.vc/servicio/servicio.php"/>
   </port>
 </service>
 </definitions>

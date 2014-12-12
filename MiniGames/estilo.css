@@ -131,7 +131,7 @@ background-image: -webkit-gradient(linear, 0% 0%, 0% 70%, from(#343435), to(#999
 	z-index: 3;
 }
 
-#ini_error{
+.inierror{
 	z-index: 5;
 	border: 3px solids slategrey;
 	position: absolute;
@@ -219,58 +219,6 @@ border-radius: 3px;
 padding-left: 3%;
 cursor: pointer;
 }
-
-/*
-#presentacion ul{
-height: 320px;
-left: -15px;
-list-style: none outside none;
-overflow: hidden;
-position: absolute;
-top: -10px;
-width: 620px;
-}
-#presentacion li{
-position:absolute;
-display:none;
-z-index:10;
-}
-#presentacion li:first-child{
-display:block;
-z-index:1000;
-}
-#presentacion .flecha{
-height:86px;
-width:10px;
-position:absolute;
-background:url('imagenes/flecha.png') no-repeat;
-top:50%;
-margin-top:-43px;
-cursor:pointer;
-z-index:5000;
-}
-#presentacion .anterior{
-background-position:left top;
-left:-30px;
-}
-#presentacion .anterior:hover{
-background-position:left bottom;
-}
-#presentacion .siguiente{
-background-position:right top;
-right:-30px;
-}
-#presentacion .siguiente:hover{
-background-position:right bottom;
-}
-#presentacion .derechos{
-position: absolute;
-top: 105%;
-left: 25%;
-}*/
-
-
-
 #list{
     margin: 2% 0% 0% 0%;
   

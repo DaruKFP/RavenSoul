@@ -1,14 +1,18 @@
 <html>
 <head>
 	<title>pagina juegos</title>
+        <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="estilojuego.css">
-        <link rel="stylesheet" href="estilos/comentario.css">
+        <link rel="stylesheet" href="estilos/comentario.css">    
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="funciones.js"></script>
 		<script src="carrucel2.js"></script>
-                <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
-			<script src="jquery.js"></script>
-		    <script type="text/javascript" src="slick.min.js"></script>
-			<link rel="stylesheet" type="text/css" href="slick.css"/>
-            <script type="text/javascript">
+        <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
+		<script src="jquery.js"></script>
+		<script type="text/javascript" src="slick.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="slick.css"/>
+        <script type="text/javascript">
 
     function objetoAjax(){
         var xmlhttp = false;
@@ -71,16 +75,17 @@ $(document).ready(function() {
 <body onload="inicio()">
 	<div id="caja">
              <section id="tsup">
-                <header id="th">
-                </header>
-                <section id="bus">
-                        <input id="txtbus" type="text">
-                        <a href="index.php"> <article id="logo"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article></a>
-                    <figure id="busico">
-                        <img src="botones/google-web-search-256.png" height="100%">
-                    </figure>
+                <section class="bar">
+                    <a href="index.php">
+                        <article class="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                    </a>
+                <section class="bar1">
+                    <?php
+                        include "barramenu.php";
+                    ?>
                 </section>
-        </section>
+                </section>
+            </section>
             			
 			
             <section id="contenedor">
@@ -88,7 +93,7 @@ $(document).ready(function() {
                 <?php 
 			if(isset($_GET['nombre'])){
 			$nombre=$_GET['nombre'];
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "select * from juegos where nombre='$nombre';");
 			if($lector = mysqli_fetch_array($res)){
 			$id = $lector["id_juego"];
@@ -112,7 +117,7 @@ $(document).ready(function() {
              <div id="sugerencias" class="c">
             <h1>Juegos que te pueden interesar</h1>
 			<?php
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "select dir_imagen,nombre from juegos;");
 			while($lector = mysqli_fetch_array($res)){
 			$portada = $lector["dir_imagen"];

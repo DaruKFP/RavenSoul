@@ -7,7 +7,7 @@
 //    mysqli_close($conexion);
 
     function comentarios(){
-$conexion = mysqli_connect("localhost", "root", "", "minigames");
+$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 $res = mysqli_query($conexion, "select * from comentario_juego where id_juego=1;");
 $comen_juego = array();
 while($lector = mysqli_fetch_array($res)){
@@ -59,7 +59,7 @@ echo"</form>";
             $user = 'remy';
                     //if(isset($_POST['tema'])){
                         $comentario= $_POST['tema'];
-                        $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                        $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                         $res = mysqli_query($conexion, "insert into comentario_juego values('0','1','$user','$comentario');");  
                         mysqli_close($conexion);
                         //header("Location: ../juego.php");

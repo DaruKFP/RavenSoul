@@ -3,7 +3,7 @@ function coment(){
             if(session_start()){
                 $user = $_SESSION['inicio'];                   
                 $comentario= $_POST['comentar'];
-                $conexion = mysqli_connect("localhost", "root", "", "minigames");            
+                $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                 mysqli_query($conexion, "insert into comentario_juego values('0','1','$user','$comentario')");  
                 mysqli_close($conexion);
             }else{

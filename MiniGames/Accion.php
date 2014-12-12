@@ -6,21 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="estilos/estilo_cat.css">
         <link rel="stylesheet" href="estilos/estilo_accion.css">
-          <link rel="stylesheet" href="css/layout.css">
+        <link rel="styleshett" href="css/menu.css">
+        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="estilo.css">
-          <link rel="stylesheet" href="css/menu.css">
-
+        <link rel="stylesheet" href="css/menu.css">
+        <script src="funciones.js"></script>
         <link rel="icon" type="image/x-icon" href="imagenes/logoicon.ico"/>
     </head>
     <body>
         <section id="t">
         <section class="bar">
-            <a href="index.php">
-                <article id="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
+                <a href="index.php">
+                    <article class="art1"><img src="css/minigames2.png" width="290" height="95" alt="Img01" ></article>
                 </a>
+            <section class="bar1">
                 <?php
                     include "barramenu.php";
                 ?>
+            </section>
         </section>
             <section id="tsup">
 					<?php 
@@ -28,12 +31,12 @@
 						$tipo = $_GET['tipoc'];
 					}
 					?>
-				<form method="post" action="Accion.php?tipoc=<?php echo($tipo) ?>">
+				<form method="post" id="for" action="Accion.php?tipoc=<?php echo($tipo) ?>">
                 <section id="bus">
-                        <input name="txtbus" type="text" value="">
-						<button type="submit">
-                    <figure id="busico">
-                        <img src="botones/google-web-search-256.png" height="100%">
+                        <input name="txtbus" id="txtbus" type="text" value="">
+						<button type="submit" id="busico">
+                    <figure id="busico2">
+                        <img src="botones/google-web-search-256.png">
                     </figure>
 						</button>
                 </section>
@@ -124,7 +127,7 @@
                         $lik = $_GET['neg'];
                         $puntuacion = -1;
                     }
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select puntuacion from juegos where id_juego='$lik';");
                     if($lector = mysqli_fetch_array($res)){
                         $puntuacion += $lector["puntuacion"];
@@ -141,7 +144,7 @@
 					}else{
 						$busc = "";
 					}
-                    $conexion = mysqli_connect("localhost", "root", "", "minigames");
+                    $conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
                     $res = mysqli_query($conexion, "select * from juegos where tipo='$tipo' and nombre like '%$busc%';");
                     while($lector = mysqli_fetch_array($res)){
                         $imagen = $lector["dir_imagen"];
@@ -231,9 +234,7 @@
                         <figure class="db"><img class="dbi" src=""><figcaption><a>Jugar</a></figcaption></figure>
                     </article>-->
                 </section>
-                <section id="paginas">
-                </section>
-                
+          
 
         </section>
     <footer id="terminos">

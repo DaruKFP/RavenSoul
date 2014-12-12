@@ -34,7 +34,7 @@
             </div>
             <div id="presentacion" class="c"> 
 			<?php
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "select portada,nombre from juegos;");
 			while($lector = mysqli_fetch_array($res)){
 			$portada = $lector["portada"];
@@ -55,7 +55,7 @@ arrows: true;
             <section id="list">
                
 				<?php
-			$conexion = mysqli_connect("localhost", "root", "", "minigames");
+			$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 			$res = mysqli_query($conexion, "select dir_imagen,nombre from juegos;");
 			while($lector = mysqli_fetch_array($res)){
 			$portada = $lector["dir_imagen"];
