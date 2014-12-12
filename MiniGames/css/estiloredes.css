@@ -19,13 +19,21 @@ body{
 	
 	font-family:Arial, Helvetica, sans-serif;
 }
-
+#Redesymas{
+	//border: 1px solid red;
+	height: 5%;
+	width: 5%;
+	//float: left;
+	left: 0%;
+	//margin-top: 8%;
+}
 #navigationMenu li{
 	list-style:none;
 	height:39px;
 	padding:2px;
 	width:40px;
-        position:absolute;
+	float: left;
+    //position:absolute;
 }
 
 #navigationMenu span{

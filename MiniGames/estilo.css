@@ -408,13 +408,39 @@ cursor: pointer;
 }
 /*CSS DE USUARIO*/
 #login{
-    margin: 8% 0% 0% 0%;
-	width:10%;
-	height:15%;
+    //margin: 8% 0% 0% 0%;
+    padding-top: 17.5%;
+	width:50%;
+	height:100%;
 	display:block;
-    position:absolute;
-	right:5%;
-	top: 5%%;
+    //position:absolute;
+
+	//right:5%;
+	//top: 5%;
+	//border: 1px solid red;
+	float: left;
+}
+.cl{
+	margin-left: 5%;
+	height: 10%;
+	width: 14%;
+	float: left;
+	//border: 1px solid red;
+}
+li{
+	list-style: none;
+	border: none;
+	background-color: none;
+}
+.cl1{
+	float: left;
+	height: 10%;
+	width: 100%;
+}
+#cer{
+	float: left;
+	margin-top: 23.5%;
+	//height: 5%;
 }
 #login2{
     margin: 8% 0% 0% 0%;

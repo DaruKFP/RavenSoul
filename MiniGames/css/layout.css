@@ -58,5 +58,7 @@ header .stuts span {
 .container {
     height: 5%;
     margin: 30px auto;
-    width: 100%;
+    width: 80%;
+    float: left;
+    //border: 1px solid red;
     }
