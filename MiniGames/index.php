@@ -60,7 +60,7 @@ arrows: true;
 			while($lector = mysqli_fetch_array($res)){
 			$portada = $lector["dir_imagen"];
 			$nombre = $lector["nombre"]; 
-			echo "<article id='art1'><ul><li><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300' style='width:200px; height:100px;'></a></li> </ul> </article>";
+			echo "<section id='artic1'><li id='listaj'><a href='juego.php?nombre=$nombre'><img src='$portada' width='220' height='300'></a></li> </section>";
          		}
 			?>
             </section>
