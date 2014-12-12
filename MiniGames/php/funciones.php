@@ -5,7 +5,7 @@
 		switch($opcion){
 			case 0:
 				echo("Hay algun error asi que busca");
-				/*header("Location: index.php");*/
+				header("Location: ../index.php");
 			break;
 			case 1:
 				//Iniciar  sesion
@@ -43,7 +43,7 @@
 					$sexo= $_POST['sexo'];
 					$fecha = $_POST['fecha_nacimiento'];
 					$descripcion = $_POST['descripcion'];
-					
+					if((strlen($nick))>2 && (strlen($nombre))>2 && (strlen($contra))>2 && (strlen($email))>2 && (strlen($sexo))>0 && (strlen($descripcion))>2){
 					$conexion = mysqli_connect("mysql.hostinger.mx", "u578924799_root", "123456", "u578924799_minig");
 					$res = mysqli_query($conexion, "select * from usuarios where nick='$nick';");
 					if($lector = mysqli_fetch_array($res)){
@@ -63,7 +63,10 @@
 						echo("<script>var b = document.getElementById('bot');b.click();</script>");
 					}
 					}
-					
+					}else{
+						echo("<form method='post' action='../nuevo.php'><button type='submit' id='bot' name='regreso_error' value='5'>Iniciar</button></form>");
+						echo("<script>var b = document.getElementById('bot');b.click();</script>");
+					}
 				}
 			break;
 			
@@ -173,6 +176,6 @@
 			break;
 		}
 	}else{
-		echo("No hay nada");
+		header("Location: ../index.php");
 	}
 ?>
